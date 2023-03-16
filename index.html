@@ -16,23 +16,24 @@
     <link rel="icon" href="portfolio.png">
 </head>
 
-<body bgcolor="#00CC6A">
+<!--<body bgcolor="#00CC6A">-->
+<body>
 
 <header>
 
     <!--Add THINUX image-->
     <figure>
-        <img usemap="#me" src="assets/img/THINUX_Light.png" alt="This is my logo." width="200">
+        <img src="assets/img/THINUX_Light.png" alt="This is my logo." width="200">
     </figure>
 
     <nav>
         <menu>
             <li><a href="https://ijse.lk/" target="_blank">Home</a></li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Skills</li>
-            <li>Activities</li>
-            <li>Gallery</li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
         </menu>
     </nav>
@@ -59,6 +60,11 @@
             <area target="_blank" alt="IJSE" title="IJSE" href="https://ijse.lk/" coords="681,255,107" shape="circle">
             <area target="_blank" alt="GOOGLE" title="GOOGLE" href="https://www.google.com/" coords="866,421,101" shape="circle">
         </map>
+
+        <!--<picture>
+            <source srcset="assets/img/IMG_20220830_201151_970-01-01%20-%20Edited.png" media="(min-width:800x)">
+            <img src="src" alt="">
+        </picture>-->
 
     </figure>
 
@@ -114,7 +120,7 @@
 
     <!--About-->
     <section>
-        <h1>About Me</h1>
+        <h1><dfn id="about">About Me</dfn></h1>
 
         <!--<b> is used to get attention-->
         <p>Hi, My name is <b><font size="+2">Thinusha Supun Dilhara.</font></b></p>
@@ -145,16 +151,22 @@
 
     <!--My Project-->
     <section>
-        <h1>My Project</h1>
+        <h1><dfn id="projects">My Project</dfn></h1>
 
-        <aside></aside>
+        <aside>
+
+            <object data="assets/pdf/ORM.pdf" type="application/pdf" height="600"></object>
+            <iframe src="https://ijse.lk/" width="800" height="600"></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1Y760sJRhnM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        </aside>
     </section>
 
     <hr>
 
     <!--My Skills-->
     <section>
-        <h1>My Skills</h1>
+        <h1><dfn id="skills">My Skills</dfn></h1>
 
         <aside></aside>
         <aside></aside>
@@ -164,7 +176,8 @@
 
     <!--My Fun Activities-->
     <section>
-        <h1>My Fun Activities</h1>
+        <h1><dfn id="activities">My Fun Activities</dfn></h1>
+
         <aside>
             <video controls width ="1080">
                 <source src="assets/videos/DJI_0291.MP4" type="video/mp4" >
@@ -173,9 +186,10 @@
             </video>
         </aside>
         <article>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis id iste laboriosam molestiae,
-                mollitia nam, natus nihil optio quasi repellendus repudiandae velit voluptatum. Consectetur deleniti
-                esse, magnam nemo officia qui!</p>
+            <p>In 2022, our batch had a meetup where we played cricket and bonded with new friends.
+                As a software engineering student, it was refreshing to take a break from coding and connect with my peers.
+                The day was filled with laughter, excitement, and camaraderie. It reminded me of the importance of taking breaks and engaging in activities that bring us joy.
+                I'm grateful for the memories made and look forward to more opportunities to connect with my fellow software engineers.</p>
         </article>
     </section>
 
@@ -186,9 +200,12 @@
         <h1>My Social Activities</h1>
         <aside></aside>
         <article>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis id iste laboriosam molestiae,
-                mollitia nam, natus nihil optio quasi repellendus repudiandae velit voluptatum. Consectetur deleniti
-                esse, magnam nemo officia qui!</p>
+            <p>On Valentine's Day 2021, my friends and I decided to spread love and kindness by giving to the less fortunate.
+                We went around the streets and found some poor people who were in hungry.
+                We gave them what we could and saw the happiness on their faces.
+                It was a humbling experience to see how little things could mean so much to someone else.
+                This act of giving reminded us of the importance of compassion and empathy in our lives.
+                It was a beautiful way to celebrate Valentine's Day and we left feeling fulfilled and grateful for the opportunity to make a difference in someone's life.</p>
         </article>
     </section>
 
@@ -196,8 +213,57 @@
 
     <!--Gallery-->
     <section>
-        <h1>Gallery</h1>
-        <aside></aside>
+
+        <h1><dfn id="gallery">Gallery</dfn></h1>
+
+        <aside>
+
+            <table border = "2">
+                <caption align="bottom">Customer Details Table</caption>
+
+                <!--table head-->
+                <colgroup>
+                    <col class="col1" style="background-color:white">
+                    <col class="col2" style="background-color:yellow">
+                    <col class="col3" style="background-color:yellow">
+                    <col class="col4" style="background-color:green">
+                    <col class="col5" style="background-color:red">
+                </colgroup>
+
+                <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Customer Name
+                    <th>Customer Address</th>
+                    <th>Customer TP</th>
+                    <th>Edit</th>
+                </tr>
+                </thead>
+
+                <!--table body content-->
+                <tbody>
+                <!--Row 1-->
+                <tr>
+                    <td>C001</td>
+                    <td>Kavindu</td>
+                    <td>Galle</td>
+                    <td>071-4983456</td>
+                    <td><button><img src="assets/img/icons8-edit-50.png" alt=""></button> <button><img src="assets/img/icons8-waste-50.png" alt=""></button></td>                </tr>
+
+                <!--Row 2-->
+                <tr>
+                    <td>C002</td>
+                    <td>Ramal</td>
+                    <td>Panadura</td>
+                    <td>071-4983456</td>
+                    <td><button><img src="assets/img/icons8-edit-50.png" alt=""></button> <button><img src="assets/img/icons8-waste-50.png" alt=""></button></td>
+                </tr>
+                </tbody>
+
+                <tfoot></tfoot>
+            </table>
+
+        </aside>
     </section>
 </main>
 
@@ -219,10 +285,19 @@
                 <li><a href="https://github.com/THINUX-Official">GitHub</a></li>
             </ul>
         </address>
-        <aside></aside>
+        <aside>
+            <figure>
+                <img src="assets/img/THINUX_Light.png" alt="This is my logo." width="200">
+            </figure>
+        </aside>
         <article>
-            <p1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, doloremque, error eveniet explicabo facere fugiat in inventore itaque labore magnam pariatur quaerat quam sed! Alias fuga in ipsam mollitia perspiciatis!</p1>
+            <p1>Thanks for checking out my website! If you have any questions or comments about my work,
+                or if you're interested in collaborating on a software project, please don't hesitate to get in touch.</p1>
         </article>
+
+        <br>
+
+        <small>© THINUX - All Rights Reserved 2023</small>
 
     </section>
 </footer>
