@@ -1,8 +1,31 @@
-*{
+/**{
     color: white;
-}
+}*/
 
 #my_paragraph{
     color: black;
 }
+
+p{
+    color: white;
+}
+
+h1{
+    color: deepskyblue;
+}
+
+label{
+    color: aqua;
+}
+
+a{
+    color: pink;
+}
+
+/*header{
+    color: blueviolet;
+    font-size: 200%;
+}*/
+
+
 
