@@ -2,6 +2,16 @@
     color: white;
 }*/
 
+header>nav{
+    position: fixed;
+    top: 0;
+    display: flex;
+}
+
+main>section{
+    margin-top: 100px;
+}
+
 #my_paragraph{
     color: black;
 }
@@ -79,6 +89,16 @@ h1:first-letter{
 
 p::selection{
     background-color: red;
+    color: white;
+}
+
+p1 {
+    color: white;
+}
+
+small{
+    justify-content: center;
+    display: flex;
     color: white;
 }
 
