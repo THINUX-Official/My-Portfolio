@@ -1,30 +1,94 @@
-/**{
+* {
     color: white;
-}*/
+}
 
-header>nav{
+header > nav {
+    background-color: black;
+    width: 100%;
+    align-items: center;
     position: fixed;
     top: 0;
     display: flex;
+    color: white;
+    text-align: right;
+    z-index: 1;
 }
 
-main>section{
+body>main>section{
+    position: relative;
+}
+
+body > main > section > aside:nth-child(1) {
+    width: 60%;
+    height: 100%;
+}
+
+body > main > section > aside > aside > nav {
+    align-items: center;
+    justify-content: center;
+
+}
+
+body > main > section > aside > header {
+    color: white;
+    font-family: Poppins;
+    font-size: 80px;
+    text-align: center;
+}
+
+body > main > section > aside > p {
+    color: white;
+    font-family: Poppins;
+    text-align: center;
+}
+
+body > main > section > aside:nth-child(2){
+    width: 40%;
+    display: flex;
+    /*float: right;*/
+    justify-content: center;
+    top: 0;
+    right: 0;
+    position: absolute;
+
+
+}
+
+
+body > main > section > aside > aside > nav {
+    display: flex;
+}
+
+body > main {
+    padding-top: 1px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header > nav > menu > div > a {
+    padding-left: 20px;
+}
+
+
+main > section {
     margin-top: 100px;
 }
 
-#my_paragraph{
+#my_paragraph {
     color: black;
 }
 
-p{
+p {
     color: white;
 }
 
-h1{
+h1 {
     color: deepskyblue;
 }
 
-label{
+label {
     color: aqua;
 }
 
@@ -37,12 +101,12 @@ label{
     font-size: 200%;
 }*/
 
-a:hover{
+a:hover {
     color: aqua;
     cursor: pointer;
 }
 
-dd{
+dd {
     color: orange;
 }
 
@@ -69,7 +133,7 @@ button {
     border-radius: 10px;
 }
 
-.button-pallet{
+.button-pallet {
     float: right;
 }
 
@@ -82,12 +146,12 @@ button {
     color: red;
 }*/
 
-h1:first-letter{
+h1:first-letter {
     color: chartreuse;
     font-size: 200%;
 }
 
-p::selection{
+p::selection {
     background-color: red;
     color: white;
 }
@@ -96,22 +160,22 @@ p1 {
     color: white;
 }
 
-small{
+small {
     justify-content: center;
     display: flex;
     color: white;
 }
 
-li::marker{
+li::marker {
     content: "🎯";
     color: red;
 }
 
-input::placeholder{
+input::placeholder {
     color: yellow;
 }
 
-input::file-selector-button{
+input::file-selector-button {
     color: white;
     background-color: blueviolet;
     border: none;
