@@ -1,7 +1,9 @@
 * {
     color: white;
+    border: 10px;
 }
 
+/*header*/
 header > nav {
     background-color: black;
     width: 100%;
@@ -14,7 +16,9 @@ header > nav {
     z-index: 1;
 }
 
-body>main>section{
+/*Home*/
+body > main > section:nth-child(1) {
+    margin-top: 100px;
     position: relative;
 }
 
@@ -42,16 +46,13 @@ body > main > section > aside > p {
     text-align: center;
 }
 
-body > main > section > aside:nth-child(2){
+body > main > section > aside:nth-child(2) {
     width: 40%;
     display: flex;
-    /*float: right;*/
     justify-content: center;
     top: 0;
     right: 0;
     position: absolute;
-
-
 }
 
 
@@ -59,8 +60,38 @@ body > main > section > aside > aside > nav {
     display: flex;
 }
 
-body > main {
-    padding-top: 1px;
+/*About Me*/
+body > main > section:nth-child(2) {
+    position: relative;
+    padding-top: 0;
+}
+
+/*main > section:nth-child(2) > div{
+    position: sticky;
+    background-color: yellow;
+    color: white;
+    height: 100px;
+    width: 100vw;
+    display: flex;
+}*/
+
+.box {
+    width: 300px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-left: 10px;
+    border-radius: 50px;
+    line-height: 30px;
+    margin-top: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    color: white;
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+.skill{
+
 }
 
 a {
@@ -73,7 +104,8 @@ header > nav > menu > div > a {
 
 
 main > section {
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 #my_paragraph {
@@ -82,6 +114,7 @@ main > section {
 
 p {
     color: white;
+    font-family: Poppins;
 }
 
 h1 {
