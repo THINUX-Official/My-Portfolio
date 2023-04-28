@@ -115,31 +115,36 @@
             border: 1px solid black;
             height: 400px;
             position: relative;
+            display: flex;
 
         }
 
         body > main > section > section > img {
-            position: absolute;
+            /*position: absolute;*/
             /*border: 2px solid red;*/
             height: 400px;
             width: calc(100% / 3);
-            display: inline-block;
+            /*display: inline-block;*/
         }
 
         main > section > section > img:nth-child(1) {
-            left: 0;
+            /*order: 1;*/
         }
 
         main > section > section > img:nth-child(2) {
-            /*position: relative;*/
+            /*!*position: relative;*!
             margin: auto;
-            right: 0;
+            right: 0;*/
+
+            /*order: 2;*/
         }
 
         main > section > section > img:nth-child(3) {
-            left: 0;
+            /*left: 0;
             right: 0;
-            margin: auto;
+            margin: auto;*/
+
+            /*order: 3;*/
 
         }
 
