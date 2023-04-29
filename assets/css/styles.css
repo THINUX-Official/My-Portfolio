@@ -145,6 +145,7 @@ label {
     color: aqua;
     font-family: Poppins;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .container {
@@ -233,6 +234,32 @@ html > body > main > section > section > aside.gallery > div.picture_border:nth-
     background-size: cover;
 }
 
+/*ContactMe*/
+
+html > body > footer > section > address > fieldset {
+    display: inline-block;
+    /*display: flex;*/
+}
+
+html > body > footer > section > address > fieldset >label {
+    display: inline-block;
+}
+
+html > body > footer > section > address > fieldset >input {
+    color: black;
+    border-radius: 50px;
+    display: inline-block;
+    left: 100px;
+    position: absolute;
+
+}
+
+textarea{
+    color: black;
+    border-radius: 10px;
+    left: 100px;
+    position: absolute;
+}
 
 a {
     text-decoration: none;
