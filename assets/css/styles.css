@@ -237,8 +237,7 @@ html > body > main > section > section > aside.gallery > div.picture_border:nth-
 /*ContactMe*/
 
 html > body > footer > section > address > fieldset {
-    display: inline-block;
-    /*display: flex;*/
+    /*display: inline-block;*/
 }
 
 html > body > footer > section > address > fieldset >label {
@@ -252,6 +251,19 @@ html > body > footer > section > address > fieldset >input {
     left: 100px;
     position: absolute;
 
+}
+
+html > body > footer > section > address > fieldset > button {
+    margin-top: 60px;
+    color: white;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50px;
+    font-family: Poppins;
+    font-weight: bold;
 }
 
 textarea{
