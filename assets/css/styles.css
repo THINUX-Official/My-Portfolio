@@ -61,6 +61,40 @@ body > main > section > aside > aside > nav {
 }
 
 /*About Me*/
+
+html > body > main > section > div {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+html > body > footer > section > div {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    height: 60px;
+}
+
+html > body > main > section > div > header {
+    color: white;
+    font-size: 40px;
+    font-family: Poppins;
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-left: 10px;
+
+}
+
+html > body > footer > section > div > header {
+    color: white;
+    font-size: 40px;
+    font-family: Poppins;
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
 body > main > section:nth-child(2) {
     position: relative;
     padding-top: 0;
@@ -83,11 +117,28 @@ body > main > section:nth-child(2) {
     border-radius: 50px;
     line-height: 30px;
     margin-top: 20px;
-    display: inline-block;
-    margin-left: 10px;
+    /*padding-top: -30px;*/
+    display: inline-flex;
+    /*margin-left: 30px;*/
     color: white;
     font-family: Poppins;
     font-weight: bold;
+    position: center;
+    /*margin: fill;*/
+}
+
+html > body > main > section > aside > aside > aside > button {
+    justify-content: center;
+    align-items: center;
+    display: inline;
+    font-family: Poppins;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+html > body > main > section > aside > aside > aside:nth-child(2) {
+    margin-top: 20px;
+    margin-left: 200px;
 }
 
 label {
@@ -97,15 +148,11 @@ label {
 }
 
 .container {
-    /*display: inline;*/
     height: 15px;
-    width: 300px;
+    width: 450px;
     background-color: white;
     border-radius: 50px;
     z-index: 1;
-    margin-left: 10px;
-    top: 0;
-    right: 0;
 }
 
 .skill {
@@ -121,14 +168,8 @@ label {
     display: inline;
     justify-content: center;
     right: 0;
+    top: 300px;
     position: absolute;
-}
-
-.download {
-    justify-content: center;
-    position: center;
-    display: block;
-
 }
 
 /*Gallery*/
