@@ -3,6 +3,19 @@
     border: 10px;
 }
 
+html > body > main > section {
+    /*height: 90vh;*/
+}
+
+html > body > footer > section {
+    height: 90vh;
+}
+
+section > div:nth-child(1) {
+    /*position: sticky;*/
+    /*top: 60px;*/
+}
+
 /*header*/
 header > nav {
     background-color: black;
@@ -82,16 +95,22 @@ body > main > section > aside > aside > nav {
 
 /*About Me*/
 
-html > body > main > section > div {
-    background-color: rgba(0, 0, 0, 0.5);
+html > body > main > section > div:nth-child(1) {
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    /*background-color: black;*/
     margin-bottom: 20px;
     height: 60px;
+    position: sticky;
+    top: 60px;
 }
 
 html > body > footer > section > div {
-    background-color: rgba(0, 0, 0, 0.5);
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    /*background-color: black;*/
     margin-bottom: 20px;
     height: 60px;
+    position: sticky;
+    top: 60px;
 }
 
 html > body > main > section > div > header {
@@ -102,6 +121,7 @@ html > body > main > section > div > header {
     text-decoration: none;
     padding-top: 5px;
     padding-left: 10px;
+    z-index: 3;
 
 }
 
@@ -255,11 +275,6 @@ html > body > main > section > section > aside.gallery > div.picture_border:nth-
 }
 
 /*ContactMe*/
-
-html > body > footer > section > address > fieldset {
-    /*display: inline-block;*/
-}
-
 html > body > footer > section > address > fieldset > label {
     display: inline-block;
     padding-top: 5px;
