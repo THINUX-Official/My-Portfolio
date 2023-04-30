@@ -24,6 +24,10 @@ html > body > header > nav > menu > div.button-pallet > a {
 }
 
 /*Home*/
+html > body > main > section:nth-child(1) {
+    height: 500px;
+}
+
 body > main > section:nth-child(1) {
     margin-top: 100px;
     position: relative;
@@ -46,6 +50,11 @@ body > main > section > aside > header {
     text-align: center;
 }
 
+html > body > main > section > aside > a {
+    margin-left: 150px;
+    z-index: 1;
+}
+
 body > main > section > aside > p {
     color: white;
     font-family: Poppins;
@@ -60,6 +69,11 @@ body > main > section > aside:nth-child(2) {
     right: 0;
     position: absolute;
 }
+
+/*html > body > main > section > aside > figure > img {*/
+/*    margin-bottom: 100px;*/
+/*    bottom: 100px;*/
+/*}*/
 
 
 body > main > section > aside > aside > nav {
@@ -360,6 +374,7 @@ main > section {
 p {
     color: white;
     font-family: Poppins;
+    padding-left: 10px;
 }
 
 h1 {
