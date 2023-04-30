@@ -11,9 +11,16 @@ header > nav {
     position: fixed;
     top: 0;
     display: flex;
-    color: white;
-    text-align: right;
     z-index: 4;
+}
+
+html > body > header > nav > menu > div.button-pallet > a {
+    color: white;
+    font-family: Poppins;
+    font-weight: bold;
+    text-align: right;
+    display: inline;
+    position: sticky;
 }
 
 /*Home*/
@@ -252,7 +259,7 @@ html > body > footer > section > address > fieldset > input {
     display: inline-block;
     left: 100px;
     position: absolute;
-    width: 650px;
+    width: 50%;
     height: 30px;
 
 }
@@ -278,24 +285,26 @@ textarea {
     border-radius: 10px;
     left: 100px;
     position: absolute;
-    width: 650px;
+    width: 50%;
 }
 
 html > body > footer > section > aside {
+    width: 40%;
     position: absolute;
     top: 70px;
     right: 0;
 }
 
-html > body > footer > section > article {
-    position: absolute;
-    top: 170px;
+html > body > footer > section > aside > article > p {
+    top: 100px;
     right: 40px;
-    width: 400px;
     text-align: center;
+    color: white;
+    font-family: Poppins;
 }
 
 html > body > footer > section > aside > nav {
+    /*position: absolute;*/
     display: flex;
     left: 0;
     right: 0;
@@ -401,10 +410,6 @@ h1:first-letter {
 
 p::selection {
     background-color: red;
-    color: white;
-}
-
-p1 {
     color: white;
 }
 
