@@ -8,7 +8,7 @@ html > body > main > section {
 }
 
 html > body > footer > section {
-    height: 90vh;
+    height: 95vh;
 }
 
 section > div:nth-child(1) {
@@ -17,23 +17,26 @@ section > div:nth-child(1) {
 }
 
 /*header*/
-header > nav {
+html > body > header > nav {
     background-color: black;
     width: 100%;
     align-items: center;
-    position: fixed;
+    position: absolute;
+    right: 0;
     top: 0;
     display: flex;
     z-index: 4;
 }
 
-html > body > header > nav > menu > div.button-pallet > a {
+html > body > header > nav > menu > div > a {
     color: white;
     font-family: Poppins;
     font-weight: bold;
     text-align: right;
-    display: inline;
-    position: sticky;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    position: relative;
 }
 
 /*Home*/
@@ -440,9 +443,9 @@ button {
     display: flex;*/
 }
 
-.button-pallet {
-    float: right;
-}
+/*.button-pallet {*/
+/*    float: right;*/
+/*}*/
 
 h1:first-letter {
     color: chartreuse;
