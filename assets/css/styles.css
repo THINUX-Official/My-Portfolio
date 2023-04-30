@@ -295,7 +295,14 @@ html > body > footer > section > aside {
     right: 0;
 }
 
+html > body > footer > section > aside > figure > img {
+    position: relative;
+    left: 75px;
+}
+
+
 html > body > footer > section > aside > article > p {
+    position: absolute;
     top: 100px;
     right: 40px;
     text-align: center;
@@ -303,14 +310,15 @@ html > body > footer > section > aside > article > p {
     font-family: Poppins;
 }
 
-html > body > footer > section > aside > nav {
-    /*position: absolute;*/
+html > body > footer > section > section > aside > nav {
+    position: relative;
     display: flex;
     left: 0;
     right: 0;
     margin: auto;
-    justify-content: center;
     padding-bottom: 50px;
+    padding-top: 20px;
+    justify-content: center
 }
 
 html > body > footer > section > small {
@@ -325,6 +333,9 @@ html > body > footer > section > small {
     font-family: Poppins;
 }
 
+figure {
+    margin: 10px;
+}
 
 /*////////////////////////////////////////////////////////////////////////////////*/
 
