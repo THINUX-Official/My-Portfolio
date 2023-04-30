@@ -30,7 +30,6 @@ body > main > section > aside:nth-child(1) {
 body > main > section > aside > aside > nav {
     align-items: center;
     justify-content: center;
-
 }
 
 body > main > section > aside > header {
@@ -240,21 +239,26 @@ html > body > footer > section > address > fieldset {
     /*display: inline-block;*/
 }
 
-html > body > footer > section > address > fieldset >label {
+html > body > footer > section > address > fieldset > label {
     display: inline-block;
+    padding-top: 5px;
 }
 
-html > body > footer > section > address > fieldset >input {
-    color: black;
+html > body > footer > section > address > fieldset > input {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    font-family: Poppins;
     border-radius: 50px;
     display: inline-block;
     left: 100px;
     position: absolute;
+    width: 650px;
+    height: 30px;
 
 }
 
 html > body > footer > section > address > fieldset > button {
-    margin-top: 60px;
+    margin-top: 46px;
     color: white;
     height: 30px;
     text-align: center;
@@ -264,14 +268,56 @@ html > body > footer > section > address > fieldset > button {
     border-radius: 50px;
     font-family: Poppins;
     font-weight: bold;
+    margin-left: 85px;
 }
 
-textarea{
-    color: black;
+textarea {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    font-family: Poppins;
     border-radius: 10px;
     left: 100px;
     position: absolute;
+    width: 650px;
 }
+
+html > body > footer > section > aside {
+    position: absolute;
+    top: 70px;
+    right: 0;
+}
+
+html > body > footer > section > article {
+    position: absolute;
+    top: 170px;
+    right: 40px;
+    width: 400px;
+    text-align: center;
+}
+
+html > body > footer > section > aside > nav {
+    display: flex;
+    left: 0;
+    right: 0;
+    margin: auto;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+html > body > footer > section > small {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    color: white;
+    font-family: Poppins;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////*/
 
 a {
     text-decoration: none;
@@ -359,12 +405,6 @@ p::selection {
 }
 
 p1 {
-    color: white;
-}
-
-small {
-    justify-content: center;
-    display: flex;
     color: white;
 }
 
