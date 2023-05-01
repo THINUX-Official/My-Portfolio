@@ -178,7 +178,7 @@ body > main > section:nth-child(2) {
     /*margin: fill;*/
 }
 
-html > body > main > section > aside > aside > aside > button {
+html > body > main > section > section > aside > aside > button {
     justify-content: center;
     align-items: center;
     display: inline;
@@ -187,9 +187,10 @@ html > body > main > section > aside > aside > aside > button {
     margin-left: 10px;
 }
 
-html > body > main > section > aside > aside > aside:nth-child(2) {
+html > body > main > section > section > aside > aside:nth-child(2) {
     margin-top: 20px;
     margin-left: 200px;
+    position: absolute;
 }
 
 label {
@@ -220,8 +221,11 @@ label {
     display: inline;
     justify-content: center;
     right: 0;
-    top: 300px;
+    top: 0;
     position: absolute;
+}
+
+html > body > main > section > section > aside.skillBar {
 }
 
 /*Gallery*/
