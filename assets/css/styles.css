@@ -11,17 +11,25 @@ html > body > footer > section {
     height: 95vh;
 }
 
-section > div:nth-child(1) {
-    /*position: sticky;*/
-    /*top: 60px;*/
+html > body > header:nth-child(1) {
+    background-color: black;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 65px;
+    position: fixed;
+    z-index: 4;
 }
 
-/*header*/
-html > body > header > nav {
-    background-color: black;
-    width: 100%;
-    align-items: center;
-    position: absolute;
+html > body > header:nth-child(1) > figure > img {
+    padding-top: 2px;
+}
+
+html > body > header:nth-child(1) > nav {
+    padding-top: 8px;
+    padding-right: 20px;
+    position: fixed;
     right: 0;
     top: 0;
     display: flex;
@@ -457,10 +465,10 @@ p::selection {
     color: white;
 }
 
-li::marker {
+/*li::marker {
     content: "🎯";
     color: red;
-}
+}*/
 
 input::placeholder {
     color: yellow;
