@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case_Two</title>
+
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+
+    <style>
+
+        section {
+            background-color: deepskyblue;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .grayCircle {
+            position: absolute;
+            border-radius: 100%;
+            width: 300px;
+            height: 300px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: gray;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        .whiteCircle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-top: 15px solid red;
+            border-bottom: 15px solid white;
+            border-left: 15px solid white;
+            border-right: 15px solid white;
+            border-radius: 100%;
+            transition: 1s;
+        }
+
+        @keyframes rotate-clockwise {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .whiteCircle:hover {
+            animation: rotate-clockwise 1s linear;
+        }
+
+        /*this will rotates backwards too*/
+        /*.whiteCircle:hover {
+            transform: rotate(360deg);
+        }*/
+
+        h2 {
+            color: white;
+            font-family: Poppins;
+        }
+
+    </style>
+
+</head>
+<body>
+<section>
+    <div class="grayCircle">
+        <h2>RWAD</h2>
+    </div>
+
+    <div class="whiteCircle">
+        <div class="redLine"></div>
+    </div>
+</section>
+</body>
+</html>
