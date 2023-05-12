@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case_Five</title>
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+
+    <style>
+
+        main {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 99vw;
+            height: 98vh;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+
+        main > section {
+            width: calc(100% * 5);
+            height: 100%;
+            display: flex;
+            animation-name: slider;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        main > section > div {
+            height: 100%;
+            flex-grow: 1;
+        }
+
+        section > div:nth-child(1) {
+            background-color: black;
+        }
+
+        section > div:nth-child(2) {
+            background-color: blue;
+        }
+
+        section > div:nth-child(3) {
+            background-color: blueviolet;
+        }
+
+        section > div:nth-child(4) {
+            background-color: deepskyblue;
+        }
+
+        @keyframes slider {
+            0%, 20% {
+                transform: translateX(0%);
+            }
+            25%, 45% {
+                transform: translateX(-25%);
+            }
+            50%, 70% {
+                transform: translateX(-50%);
+            }
+            75%, 95% {
+                transform: translateX(-75%);
+            }
+            100% {
+                transform: translateX(-75%);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+<main>
+
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+</main>
+
+</body>
+</html>
