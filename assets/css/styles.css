@@ -49,10 +49,7 @@ html > body > header > nav > menu > div > a {
 
 /*Home*/
 html > body > main > section:nth-child(1) {
-    height: 500px;
-}
-
-body > main > section:nth-child(1) {
+    height: 550px;
     margin-top: 100px;
     position: relative;
 }
@@ -66,6 +63,12 @@ body > main > section > aside > aside > nav {
     align-items: center;
     justify-content: center;
 }
+
+body > main > section > aside > aside {
+    position: relative;
+    bottom: 0;
+}
+
 
 body > main > section > aside > header {
     color: white;
@@ -94,11 +97,9 @@ body > main > section > aside:nth-child(2) {
     position: absolute;
 }
 
-/*html > body > main > section > aside > figure > img {*/
-/*    margin-bottom: 100px;*/
-/*    bottom: 100px;*/
-/*}*/
-
+body > main > section > aside:nth-child(2) figure > img {
+    width: 450px;
+}
 
 body > main > section > aside > aside > nav {
     display: flex;
@@ -484,6 +485,8 @@ input::file-selector-button {
     border: none;
     border-radius: 10px;
 }
+
+
 
 
 

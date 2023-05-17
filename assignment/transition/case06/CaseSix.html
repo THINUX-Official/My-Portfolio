@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case_Six</title>
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+
+    <style>
+
+        main {
+            position: absolute;
+            background: red;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: url("/assignment/transition/case06/assets/img/sky.jpg");
+            background-size: cover;
+            z-index: 1;
+        }
+
+        div.road {
+            position: absolute;
+            bottom: 0;
+            width: 100vw;
+            height: 25vh;
+            background: url("/assignment/transition/case06/assets/img/road.jpg");
+            z-index: 2;
+        }
+
+        div.city {
+            position: absolute;
+            width: 100vw;
+            height: 25vh;
+            bottom: 25vh;
+            background: url("/assignment/transition/case06/assets/img/city.png");
+        }
+
+        section.car{
+            width: 400px;
+            height: 150px;
+            position: absolute;
+            bottom: 20%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 2;
+            background: url("/assignment/transition/case06/assets/img/car.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        div.car_body {
+            position: absolute;
+            bottom: 15%;
+            width: 400px;
+            height: 150px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: url("/assignment/transition/case06/assets/img/car.png");
+            z-index: 3;
+            background-size: cover;
+        }
+
+        div.right_wheel, div.left_wheel {
+            background: url("/assignment/transition/case06/assets/img/wheel.png");
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background-size: cover;
+
+            z-index: 5;
+        }
+
+        div.left_wheel {
+            left: 450px;
+            bottom: 100px;
+        }
+
+        div.right_wheel {
+            right: 463px;
+            bottom: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<main>
+    <div class="city"></div>
+    <section class="car">
+        <div class="car_body"></div>
+        <div class="left_wheel"></div>
+        <div class="right_wheel"></div>
+    </section>
+    <div class="road"></div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+@media screen and (max-width: 600px) {
+    body > main > section > aside > header {
+        color: white;
+        font-family: Poppins;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    body > main > section > aside:nth-child(2) {
+        width: 100vw;
+        display: flex;
+        justify-content: right;
+        right: 0;
+        position: absolute;
+    }
+
+    body > main > section > aside:nth-child(2) figure > img {
+        width: 400px;
+    }
+
+    body > main > section > aside > aside {
+        width: 100vw;
+        margin-top: 450px;
+        z-index: 5;
+    }
+
+}
