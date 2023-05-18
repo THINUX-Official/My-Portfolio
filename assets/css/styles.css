@@ -229,6 +229,13 @@ label {
 html > body > main > section > section > aside.skillBar {
 }
 
+/*Assignments*/
+
+.assignment_case_01{
+    width: 10px;
+    height: 10px;
+}
+
 /*Gallery*/
 .gallery {
     width: 98vw;

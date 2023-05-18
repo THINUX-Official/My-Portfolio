@@ -7,63 +7,52 @@
 
     <style>
 
+        body {
+            overflow: hidden;
+        }
+
         main {
-            position: absolute;
-            background: red;
             width: 100vw;
             height: 100vh;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
             background: url("/assignment/transition/case06/assets/img/sky.jpg");
             background-size: cover;
-            z-index: 1;
         }
 
         div.road {
             position: absolute;
             bottom: 0;
-            width: 100vw;
+            width: 400vw;
             height: 25vh;
             background: url("/assignment/transition/case06/assets/img/road.jpg");
-            z-index: 2;
         }
 
         div.city {
             position: absolute;
-            width: 100vw;
-            height: 25vh;
+            width: 400vw;
+            height: 31vh;
             bottom: 25vh;
             background: url("/assignment/transition/case06/assets/img/city.png");
         }
 
-        section.car{
+        div.city, div.road{
+            animation-name: movingCity;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        section.car {
             width: 400px;
             height: 150px;
             position: absolute;
-            bottom: 20%;
+            bottom: 15%;
             left: 0;
             right: 0;
             margin: auto;
-            z-index: 2;
+            z-index: 4;
             background: url("/assignment/transition/case06/assets/img/car.png");
             background-size: cover;
             background-repeat: no-repeat;
-        }
-
-        div.car_body {
-            position: absolute;
-            bottom: 15%;
-            width: 400px;
-            height: 150px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            background: url("/assignment/transition/case06/assets/img/car.png");
-            z-index: 3;
-            background-size: cover;
         }
 
         div.right_wheel, div.left_wheel {
@@ -72,20 +61,40 @@
             width: 70px;
             height: 70px;
             background-size: cover;
-
-            z-index: 5;
+            z-index: 4;
+            animation-name: wheels;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
         }
 
         div.left_wheel {
-            left: 450px;
-            bottom: 100px;
+            right: 48px;
+            bottom: -10px;
         }
 
         div.right_wheel {
-            right: 463px;
-            bottom: 100px;
+            bottom: -10px;
+            left: 37px;
         }
 
+        @keyframes wheels {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes movingCity {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(-75%);
+            }
+        }
 
     </style>
 </head>
