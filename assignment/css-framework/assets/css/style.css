@@ -7,7 +7,16 @@
     display: flex;
     flex-wrap: nowrap;
     margin-top: 100px;
+    font-family: Poppins;
     /*top: 0;
     bottom: 0;
     margin: auto;*/
+}
+
+a{
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
 }
