@@ -1,3 +1,7 @@
+* {
+    font-family: Poppins;
+}
+
 .thinux_navigation_bar {
     /*width: 100vw;*/
 }
@@ -13,7 +17,7 @@
     margin: auto;*/
 }
 
-a{
+a {
     text-decoration: none;
 }
 

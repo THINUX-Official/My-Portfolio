@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/normalize.css">
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.css">
+</head>
+<body>
+        <header class="thinux_navigation_bar">
+            <div class="logo">THINUX</div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="nav_bar">
+                <ul>
+                    <li>
+                        <a href="" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="">About</a>
+                    </li>
+                    <li>
+                        <a href="">Project</a>
+                    </li>
+                    <li>
+                        <a href="">Skills</a>
+                    </li>
+                    <li>
+                        <a href="">Activities</a>
+                    </li>
+                    <li>
+                        <a href="">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function (){
+            navBar = document.querySelector(".nav_bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
