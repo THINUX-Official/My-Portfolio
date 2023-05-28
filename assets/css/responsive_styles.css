@@ -1,4 +1,20 @@
 @media screen and (max-width: 425px) {
+
+    /*Navigation_Bar/////////////////////////////////////////////////////////*/
+
+    /*Home*/
+    html > body > main > section:nth-child(1) {
+        height: 700px;
+        margin-top: 100px;
+        position: relative;
+    }
+
+    /*Headers*/
+    body > main > section > aside:nth-child(1) {
+        width: 100%;
+        height: 100%;
+    }
+
     body > main > section > aside > header {
         color: white;
         font-family: Poppins;
@@ -6,6 +22,14 @@
         text-align: center;
     }
 
+    /*Typing Image*/
+    body > main > section > aside > a > img {
+        width: 300px;
+        margin-left: -100px;
+        z-index: 1;
+    }
+
+    /*DP Section*/
     body > main > section > aside:nth-child(2) {
         width: 100vw;
         display: flex;
@@ -14,8 +38,10 @@
         position: absolute;
     }
 
+    /*My DP*/
     body > main > section > aside:nth-child(2) figure > img {
-        width: 400px;
+        margin-top: 200px;
+        width: 350px;
     }
 
     body > main > section > aside > aside {
@@ -24,4 +50,9 @@
         z-index: 5;
     }
 
+    body > main > section > aside > aside > nav {
+        align-items: center;
+        justify-content: center;
+        margin-top: 520px;
+    }
 }
