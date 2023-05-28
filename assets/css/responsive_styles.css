@@ -1,7 +1,6 @@
 @media screen and (max-width: 425px) {
 
     /*Navigation_Bar/////////////////////////////////////////////////////////*/
-
     /*Home*/
     html > body > main > section:nth-child(1) {
         height: 700px;
@@ -54,5 +53,89 @@
         align-items: center;
         justify-content: center;
         margin-top: 520px;
+    }
+
+    /*About Me*/
+    .my_details {
+        position: relative;
+        width: 100%;
+        height: 420px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .download_section {
+        position: relative;
+        width: 100%;
+        height: 30px;
+        left: 30px;
+        right: 0;
+        margin: auto;
+    }
+
+    .about_me_section {
+        position: relative;
+        height: 1000px;
+    }
+
+    /*ContactMe//////////////////////////////////////////////////////////////*/
+    .contact_me_section {
+        position: relative;
+        height: 750px;
+    }
+
+    .contact_me_section > address {
+        position: relative;
+        width: 100%;
+        height: 200px;
+    }
+
+    html > body > footer > section > address > fieldset > input {
+        width: 75%;
+    }
+
+    textarea {
+        width: 75%;
+    }
+
+    html > body > footer > section > address > fieldset > button {
+        width: 155px;
+        margin-left: 212px;
+    }
+
+    html > body > footer > section > aside {
+        position: relative;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        right: 0;
+    }
+
+    .contact_me_section > aside {
+        position: relative;
+    }
+
+    .contact_me_section > aside > figure > img {
+        width: 300px;
+        height: 100%;
+        position: relative;
+        left: 40px;
+    }
+
+    html > body > footer > section > aside > article > p {
+        top: 0;
+        width: 300px;
+        height: 100%;
+        position: relative;
+        left: 40px;
+        text-align: center;
+        color: white;
+        font-family: Poppins;
+    }
+
+    .contact_me_section > section > aside > nav {
+        position: relative;
+        padding-top: 50px;
     }
 }
