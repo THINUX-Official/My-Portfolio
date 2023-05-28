@@ -27,15 +27,15 @@
 
 <body>
 
-<header>
-    <!--Add THINUX logo-->
-    <figure>
-        <img src="assets/img/THINUX_Light.png" alt="This is my logo." width="200">
-    </figure>
-    <nav>
+<!--<header>
+    &lt;!&ndash;Add THINUX logo&ndash;&gt;
+    &lt;!&ndash;<figure>
+        <img class="nav_bar_logo" src="assets/img/THINUX_Light.png" alt="This is my logo.">
+    </figure>&ndash;&gt;
+    <nav class="nav_bar">
         <menu>
             <div>
-                <a href="#home">Home</a>
+                <a href="#home" class="active">Home</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
@@ -46,6 +46,40 @@
         </menu>
     </nav>
 
+</header>-->
+
+<header class="thinux_navigation_bar">
+    <div class="logo">THINUX</div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav_bar">
+        <ul>
+            <li>
+                <a href="#home" class="active">Home</a>
+            </li>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#projects">Project</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#activities">Activities</a>
+            </li>
+            <li>
+                <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
 </header>
 
 <main id="home">
@@ -55,9 +89,9 @@
             <header>Hi I'm</header>
             <header style="font-weight: bold">THINUX</header>
             <header style="text-align: left; padding-left: 10px">I'm a,</header>
-            <a href="https://git.io/typing-svg"><img
+            <!--<a href="https://git.io/typing-svg"><img
                     src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=700&size=80&duration=1000&pause=1000&color=36BCF7FF&vCenter=true&width=800&height=100&lines=Software+Engineer;Software+Developer;Web+Designer+;Web+Developer;UX+%2F+UI+Designer;Professional+Coder"
-                    alt="Typing SVG"/></a>
+                    alt="Typing SVG"/></a>-->
             <aside>
                 <nav>
                     <figure>
@@ -105,7 +139,7 @@
         <aside>
             <figure>
                 <!--This is my DP-->
-                <img usemap="#me" src="assets/img/in_black.png"
+                <img class="in_black" usemap="#me" src="assets/img/in_black.png"
                      alt="This is my DP.">
 
             </figure>
@@ -115,7 +149,7 @@
 
     <br>
 
-    <hr>
+    <!--    <hr>-->
 
     <!--About-->
     <section style="position: relative">
@@ -149,73 +183,66 @@
             Whether you're looking to build a new website, develop a custom application, or optimize your existing
             software, I'm here to help. Feel free to get in touch and let's see what we can create together!</p>
 
-        <section>
-            <aside style="position: relative">
-                <aside style="width: 60%;">
-                    <dd class="box" style="margin-top: 0">Name: Thinusha Supun Dilhara</dd>
-                    <dd class="box" style="display: inline-block">Age: 23</dd>
-                    <br>
-
-                    <dd class="box">From : Galle, Sri Lanka.</dd>
-                    <dd class="box">Phone: 0774002633</dd>
-                    <br>
-                    <dd class="box">Birthday: 24 March 2000</dd>
-                    <dd class="box">Gender: Male</dd>
-                    <br>
-                    <dd class="box">Study: IJSE</dd>
-                    <dd class="box">Degree: BSc(Hons) in SE.</dd>
-                </aside>
-
-                <aside style="position: absolute">
-                    <button style="width: 155px"><a href="ORM.pdf" download="cv.pdf">Download My CV</a></button>
-
-                    <button style="width: 155px"><a href="">Hire Me</a></button>
-                </aside>
-
-                <aside class="skillBar">
-                    <label>JAVA</label>
-                    <div class="container">
-                        <div class="skill"></div>
-                    </div>
-
-                    <br>
-
-                    <label>HTML</label>
-                    <div class="container">
-                        <div class="skill"></div>
-                    </div>
-
-                    <br>
-
-                    <label>CSS</label>
-                    <div class="container">
-                        <div class="skill"></div>
-                    </div>
-
-                    <br>
-
-                    <label>JS</label>
-                    <div class="container">
-                        <div class="skill" style="width: 70%;"></div>
-                    </div>
-
-                    <br>
-
-                    <label>BOOTSTRAP</label>
-                    <div class="container">
-                        <div class="skill" style="width: 70%;"></div>
-                    </div>
-
-                    <br>
-
-                    <label>PYTHON</label>
-                    <div class="container">
-                        <div class="skill" style="width: 50%;"></div>
-                    </div>
-                </aside>
+        <section class="my_details_section">
+            <!--            <aside>-->
+            <aside class="my_details">
+                <dd class="box">Name: Thinusha Supun Dilhara</dd>
+                <dd class="box" >Age: 23</dd>
+                <dd class="box">From : Galle, Sri Lanka.</dd>
+                <dd class="box">Phone: 0774002633</dd>
+                <dd class="box">Birthday: 24 March 2000</dd>
+                <dd class="box">Gender: Male</dd>
+                <dd class="box">Study: IJSE</dd>
+                <dd class="box">Degree: BSc(Hons) in SE.</dd>
             </aside>
 
+            <aside class="download_section">
+                <button style="width: 155px; margin-right: 10px;"><a href="ORM.pdf" download="cv.pdf">Download My CV</a></button>
+                <button style="width: 155px"><a href="">Hire Me</a></button>
+            </aside>
 
+            <!--<aside class="skillBar">
+                <label>JAVA</label>
+                <div class="container">
+                    <div class="skill"></div>
+                </div>
+
+                <br>
+
+                <label>HTML</label>
+                <div class="container">
+                    <div class="skill"></div>
+                </div>
+
+                <br>
+
+                <label>CSS</label>
+                <div class="container">
+                    <div class="skill"></div>
+                </div>
+
+                <br>
+
+                <label>JS</label>
+                <div class="container">
+                    <div class="skill" style="width: 70%;"></div>
+                </div>
+
+                <br>
+
+                <label>BOOTSTRAP</label>
+                <div class="container">
+                    <div class="skill" style="width: 70%;"></div>
+                </div>
+
+                <br>
+
+                <label>PYTHON</label>
+                <div class="container">
+                    <div class="skill" style="width: 50%;"></div>
+                </div>
+            </aside>-->
+            <!--            </aside>-->
         </section>
     </section>
 
@@ -553,17 +580,16 @@
         </address>-->
 
         <aside>
-            <figure>
-                <img src="assets/img/THINUX_Light.png" alt="This is my logo." width="400px">
-            </figure>
+            <!--<figure>
+                <img src="assets/img/THINUX_Light.png" alt="This is my logo.">
+            </figure>-->
 
-            <article>
+            <!--<article>
                 <p>Thanks for checking out my website! If you have any questions or comments about my work,
                     or if you're interested in collaborating on a software project, please don't hesitate to get in
                     touch.
                 </p>
-            </article>
-
+            </article>-->
         </aside>
 
 
@@ -640,5 +666,14 @@
         }
     }
 </script>
+
+<script>
+    hamburger = document.querySelector(".hamburger");
+    hamburger.onclick = function () {
+        navBar = document.querySelector(".nav_bar");
+        navBar.classList.toggle("active");
+    }
+</script>
+
 </body>
 </html>
