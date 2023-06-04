@@ -20,10 +20,6 @@ html > body > main > section {
     /*height: 90vh;*/
 }
 
-html > body > footer > section {
-    height: 1000px;
-}
-
 /*Navigation_Bar/////////////////////////////////////////////////////////*/
 .thinux_navigation_bar {
     position: fixed;
@@ -574,12 +570,16 @@ html > body > main > section > section > aside.gallery > div.picture_border:nth-
 }
 
 /*Contact Me//////////////////////////////////////////////////////////////*/
+html > body > footer > section {
+    height: 90vh;
+}
+
 html > body > footer > section > address > fieldset > label {
     display: inline-block;
     padding-top: 5px;
 }
 
-html > body > footer > section > address > fieldset > input {
+html > body > footer > section > section > address > fieldset > input {
     background-color: rgba(255, 255, 255, 0.5);
     color: white;
     font-family: Poppins;
@@ -601,7 +601,7 @@ textarea {
     width: 50%;
 }
 
-html > body > footer > section > address > fieldset > button {
+html > body > footer > section > section > address > fieldset > button {
     margin-top: 46px;
     color: white;
     height: 30px;
@@ -615,29 +615,35 @@ html > body > footer > section > address > fieldset > button {
     margin-left: 85px;
 }
 
-html > body > footer > section > aside {
+.contact_me_section > aside {
     width: 40%;
     position: absolute;
     top: 70px;
     right: 0;
 }
 
-html > body > footer > section > aside > figure > img {
+html > body > footer > section > section > aside {
+    position: absolute;
+    width: 40%;
+    right: 0;
+}
+
+html > body > footer > section > section > aside > figure > img {
     width: 400px;
     position: relative;
     left: 75px;
 }
 
-html > body > footer > section > aside > article > p {
-    position: absolute;
-    top: 100px;
-    right: 40px;
+html > body > footer > section > section > aside > article > p {
+    position: relative;
+    /*top: 100px;*/
+    /*right: 40px;*/
     text-align: center;
     color: white;
     font-family: Poppins;
 }
 
-html > body > footer > section > section > aside > nav {
+.social_media {
     position: relative;
     display: flex;
     left: 0;
@@ -648,8 +654,8 @@ html > body > footer > section > section > aside > nav {
     justify-content: center
 }
 
-html > body > footer > section > small {
-    position: absolute;
+html > body > footer > small {
+    position: relative;
     left: 0;
     right: 0;
     bottom: 20px;

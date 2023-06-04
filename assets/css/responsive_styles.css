@@ -1,3 +1,11 @@
+@media screen and (max-width: 320px) {
+
+}
+
+@media screen and (max-width: 375px) {
+
+}
+
 @media screen and (max-width: 425px) {
 
     /*Navigation_Bar/////////////////////////////////////////////////////////*/
@@ -116,14 +124,14 @@
         position: relative;
     }
 
-    .contact_me_section > aside > figure > img {
+    html > body > footer > section > section > aside > figure > img {
         width: 300px;
         height: 100%;
         position: relative;
         left: 40px;
     }
 
-    html > body > footer > section > aside > article > p {
+    html > body > footer > section > section > aside > article > p {
         top: 0;
         width: 300px;
         height: 100%;
@@ -134,8 +142,32 @@
         font-family: Poppins;
     }
 
-    .contact_me_section > section > aside > nav {
+    .social_media {
         position: relative;
         padding-top: 50px;
     }
+
+    html > body > footer > small {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        margin: auto;
+        justify-content: center;
+        display: flex;
+        color: white;
+        font-family: Poppins;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 1440px) {
+
 }
