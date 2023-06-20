@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knight Rider</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+
+    <style>
+        section {
+            position: absolute;
+            width: 1300px;
+            height: 200px;
+            display: flex;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border: solid black 1px;
+        }
+
+        div {
+            height: 75px;
+            flex-grow: 1;
+            /*width: 200px;*/
+            /*top: 0;*/
+            /*bottom: 0;*/
+            /*margin: auto;*/
+            border: 1px solid red;
+        }
+
+        #btnStart {
+            position: absolute;
+            top: 500px;
+            left: 0;
+            right: 200px;
+            margin: auto;
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        #btnStop {
+            position: absolute;
+            top: 500px;
+            left: 200px;
+            right: 0;
+            margin: auto;
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .text {
+            position: relative;
+            margin-top: 150px;
+            left: 0;
+            bottom: 0;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+<h1 class="text">JS Knight Rider</h1>
+
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+
+<button class="bg-primary" id="btnStart">START</button>
+<button class="bg-danger" id="btnStop">STOP</button>
+
+<audio id="audio" src="/assignment/js/knight/assets/audio/Knight.mp3"></audio>
+
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script>
+
+    let colors = ["#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF", '#eed2d2', "#D29F9F", "#B96868", "#FF0000"];
+
+    let divArray = document.querySelector("section").children;
+    let audios = document.getElementById("audio");
+    let out = 0;
+    let rest = true;
+    let stop;
+
+    $(document).ready(function () {
+        divArray.css("border", "none");
+    });
+
+    $("#btnStart").click(function () {
+        audios.play();
+        clearInterval(stop);
+
+        stop = setInterval(function () {
+            if (rest) {
+                for (let i = 0; i < divArray.length; i++) {
+                    divArray[i].style.background = colors[i];
+                }
+                let last = colors.pop();
+
+                colors.unshift(last);
+                out++;
+
+                if (out == 8) {
+                    rest = false;
+                }
+            }
+            if (rest == false) {
+                let final = colors.shift();
+                colors.push(final);
+
+                for (let i = 0; i < divArray.length; i++) {
+                    divArray[i].style.background = colors[i];
+                }
+                out--;
+                if (out == 1) {
+                    rest = true;
+                }
+            }
+
+        }, 150);
+    });
+
+    $("#btnStop").click(function () {
+        clearInterval(stop);
+        audios.pause();
+    });
+
+</script>
+
+</body>
+</html>
