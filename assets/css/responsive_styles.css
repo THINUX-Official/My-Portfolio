@@ -124,6 +124,10 @@
         position: relative;
     }
 
+    html > body > footer > section > section > aside {
+        display: none;
+    }
+
     html > body > footer > section > section > aside > figure > img {
         width: 300px;
         height: 100%;
