@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POS</title>
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body style="background-color: #000235">
+
+<header>
+    <section class="thinux_navigation_bar">
+        <nav class="navbar navbar-expand-lg " data-bs-theme="dark" style="background-color: black;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">THINUX</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" id="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" id="customer">Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" id="orders">Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" id="item">Items</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Others
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+</header>
+
+<main>
+    <!--Home-->
+    <!--<section class="cards" id="dashboard">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <a onclick="loadSection('dashboard')">
+                <div class="col">
+                    <div class="card h-100" style="width: 400px;">
+                        <img src="/assignment/css-framework/assets/img/customer.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h1 class="card-title">Customers</h1>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="Order.html">
+                <div class="col">
+                    <div class="card h-100" style="width: 400px;">
+                        <img src="/assignment/css-framework/assets/img/order.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h1 class="card-title">Orders</h1>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="Items.html">
+                <div class="col">
+                    <div class="card h-100" style="width: 400px;">
+                        <img src="/assignment/css-framework/assets/img/item.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h1 class="card-title">Items</h1>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>-->
+
+    <section class="container text" id="dashboard">
+        <div class="jumbotron pt-md-5">
+            <div id="home-tiles">
+                <div class="row ">
+                    <div class="col-lg-4 col-xl-4 mb-2">
+                        <div class="card">
+                            <div class="card-header bg-info font-weight-bolder">Customers</div>
+                            <div class="card-body">
+                                <img src="/assignment/css-framework/assets/img/customers_icon.png" alt="" width="75px"
+                                     class="d-inline-block align-text-center">
+                                <div class="dash-tile-text text-right text-black-50"><h2>5</h2></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 mb-2">
+                        <div class="card">
+                            <div class="card-header bg-info font-weight-bolder">Items</div>
+                            <div class="card-body">
+                                <img src="/assignment/css-framework/assets/img/item_icon.png" alt="Logo" width="75px"
+                                     class="d-inline-block align-text-center">
+                                <div class="dash-tile-text text-right text-black-50"><h2>5</h2></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 mb-2">
+                        <div class="card">
+                            <div class="card-header bg-info font-weight-bolder">Orders</div>
+                            <div class="card-body">
+                                <img src="/assignment/css-framework/assets/img/order_icon.png" alt="Logo" width="75px"
+                                     class="d-inline-block align-text-center">
+                                <div class="dash-tile-text text-right text-black-50"><h2>0</h2></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--Customer-->
+    <section class="container text" id="customerContent">
+        <section class="row object-fit-contain" yle="font-weight: bold">
+
+            <h2 class="text-primary">
+                <img src="/assignment/css-framework/assets/img/customers_icon.png" alt="Logo" width="75px"
+                     class="d-inline-block align-text-center">
+                CUSTOMERS
+            </h2>
+
+            <section class="col border-dark-subtle border rounded-5 object-fit-contain col-12 col-lg-4"
+                     style="background-color: #000235">
+
+                <form>
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="text" class="form-control" id="cId">
+                        <label for="cId">Customer ID</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name">
+                        <label for="name">Customer Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="address">
+                        <label for="address">Customer Address</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="contact">
+                        <label for="contact">Customer Contact</label>
+                    </div>
+                </form>
+
+                <section>
+                    <div class="col" style="text-align: center">
+                        <button id="addCustomer" type="button" class="btn btn-primary mt-3 mb-3">ADD</button>
+                        <button type="button" class="btn btn-success mt-3 mb-3 ms-3">UPDATE</button>
+                        <button type="button" class="btn btn-danger mt-3 mb-3 ms-3">DELETE</button>
+                        <button type="button" class="btn btn-secondary mt-3 mb-3 ms-3">BACK</button>
+                    </div>
+                </section>
+            </section>
+
+            <section class="col object-fit-contain"> <!--border-light m-3 border rounded-->
+
+                <h5 class="text-dark text-center col-12 col-lg-8 mt-3"></h5>
+                <table class="table table-dark table-striped" style="background-color: #000235;">
+                    <thead>
+                    <tr>
+                        <th style="background-color: black; text-align: center;" scope="col">ID</th>
+                        <th style="background-color: black; text-align: center;" scope="col">Name</th>
+                        <th style="background-color: black; text-align: center;" scope="col">Address</th>
+                        <th style="background-color: black; text-align: center;" scope="col">Contact</th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="tblCustomer">
+                    <tr>
+                        <th scope="row">C001</th>
+                        <td>Thinusha</td>
+                        <td>Galle</td>
+                        <td>0774002633</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C002</th>
+                        <td>Supun</td>
+                        <td>Galle</td>
+                        <td>0774002633</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C003</th>
+                        <td>Dilhara</td>
+                        <td>Galle</td>
+                        <td>0774002633</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C004</th>
+                        <td>Chamodya</td>
+                        <td>Galle</td>
+                        <td>0774002633</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">C005</th>
+                        <td>Kavindi</td>
+                        <td>Galle</td>
+                        <td>0774002633</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+
+    </section>
+
+    <!--Orders-->
+    <section class="container text" id="orderContent">
+
+        <section>
+            <h2 class="text-primary">
+                <img src="/assignment/css-framework/assets/img/order_icon.png" alt="Logo" width="75px"
+                     class="d-inline-block align-text-center">
+                ORDERS
+            </h2>
+        </section>
+
+        <section class="row mt-3 border border-dark rounded p-3" style="background-color: black">
+            <form action="">
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">CustomerID</span>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select ID</option>
+                                <option value="1">C001</option>
+                                <option value="2">C002</option>
+                                <option value="3">C003</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Customer Name</span>
+                            <input class="form-control" type="text" placeholder=""
+                                   aria-label="Disabled input example"
+                                   disabled>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Customer Contact</span>
+                            <input class="form-control" type="number" placeholder=""
+                                   aria-label="Disabled input example"
+                                   disabled>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Date</span>
+                            <input class="form-control" type="datetime-local">
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="row mt-3 mb-3">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Item ID</span>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select ID</option>
+                                <option value="1">I001</option>
+                                <option value="2">I002</option>
+                                <option value="3">I003</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Item Name</span>
+                            <input class="form-control" type="text" placeholder="" aria-label="Disabled input example"
+                                   disabled>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Item Price</span>
+                            <input class="form-control" type="number" placeholder="" aria-label="Disabled input example"
+                                   disabled>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Qty On Hand</span>
+                            <input class="form-control" type="number" placeholder="" aria-label="Disabled input example"
+                                   disabled>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">QTY</span>
+                            <input class="form-control" type="number" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-10"></div>
+                        <div class="col-2">
+                            <button type="button" class="btn btn-danger">CLEAR</button>
+                            <button type="button" class="btn btn-success ms-3">ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="row mt-3 border border-dark rounded p-3 object-fit-contain" style="background-color: black">
+            <div class="col">
+                <table class="table table-dark table-striped">
+                    <thead>
+                    <tr>
+                        <th style="background-color: blueviolet" scope="col">IID</th>
+                        <th style="background-color: blueviolet" scope="col">Name</th>
+                        <th style="background-color: blueviolet" scope="col">Qty</th>
+                        <th style="background-color: blueviolet" scope="col">Unit Price</th>
+                        <th style="background-color: blueviolet" scope="col">Total</th>
+                        <th style="background-color: blueviolet" scope="col">Action</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <th scope="col">I001</th>
+                        <th scope="col">T-Shirt</th>
+                        <th scope="col">2</th>
+                        <th scope="col">990.00</th>
+                        <th scope="col">1980.00</th>
+                        <th scope="col">
+                            <button type="button" class="btn btn-warning">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th scope="col">I002</th>
+                        <th scope="col">Shirt</th>
+                        <th scope="col">1</th>
+                        <th scope="col">1200.00</th>
+                        <th scope="col">1200.00</th>
+                        <th scope="col">
+                            <button type="button" class="btn btn-warning">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card text-bg-warning mb-3" style="max-width: 18rem;">
+                <h5 class="card-header">Total</h5>
+                <div class="card-body">
+                    <h2 class="card-title">3180.00</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10"></div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-danger">CANCEL</button>
+                    <button type="button" class="btn btn-primary ms-3">PURCH</button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!--Items-->
+    <section class="container text" id="itemContent">
+        <section class="row object-fit-contain" style="font-weight: bold">
+
+            <h2 class="text-primary">
+                <img src="/assignment/css-framework/assets/img/item_icon.png" alt="Logo" width="75px"
+                     class="d-inline-block align-text-center">
+                ITEMS
+            </h2>
+
+            <section class="col border-dark-subtle border rounded-5 object-fit-contain col-12 col-lg-4"
+                     style="background-color: #000235">
+
+                <form>
+                    <div class="form-floating mb-3 mt-3">
+                        <input type="text" class="form-control" id="iId">
+                        <label for="iId">Item ID</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name1">
+                        <label for="name1">Item Name</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="price">
+                        <label for="price">Item Price</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="qty">
+                        <label for="qty">Item Quantity</label>
+                    </div>
+                </form>
+
+                <section>
+                    <div class="col" style="text-align: center">
+                        <button type="button" class="btn btn-primary mt-3 mb-3">ADD</button>
+                        <button type="button" class="btn btn-success mt-3 mb-3 ms-3">UPDATE</button>
+                        <button type="button" class="btn btn-danger mt-3 mb-3 ms-3">DELETE</button>
+                        <button type="button" class="btn btn-secondary mt-3 mb-3 ms-3">BACK</button>
+                    </div>
+                </section>
+            </section>
+
+            <section class="col object-fit-contain col-12 col-lg-8 mt-3"> <!--border-light m-3 border rounded-->
+
+                <h5 class="text-dark text-center m-lg-3 pb-3"></h5>
+                <table class="table table-dark table-striped" style="background-color: #000235;">
+                    <thead>
+                    <tr>
+                        <th style="background-color: black; text-align: center;" scope="col">ID</th>
+                        <th style="background-color: black; text-align: center;" scope="col">Name</th>
+                        <th style="background-color: black; text-align: center;" scope="col">Price</th>
+                        <th style="background-color: black; text-align: center;" scope="col">Quantity</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <th scope="row">I001</th>
+                        <td>T-Shirts</td>
+                        <td>990.00</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I002</th>
+                        <td>Shirts</td>
+                        <td>1200.00</td>
+                        <td>80</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I003</th>
+                        <td>Trousers</td>
+                        <td>2500.00</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I004</th>
+                        <td>Shorts</td>
+                        <td>1500.00</td>
+                        <td>70</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">I005</th>
+                        <td>Denims</td>
+                        <td>3500.00</td>
+                        <td>30</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </section>
+</main>
+
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="js.js"></script>
+</body>
+</html>
