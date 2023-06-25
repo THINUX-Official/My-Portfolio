@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>POS</title>
-    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body style="background-color: #000235">
@@ -147,32 +147,32 @@
 
                 <form>
                     <div class="form-floating mb-3 mt-3">
-                        <input type="text" class="form-control" id="cId">
-                        <label for="cId">Customer ID</label>
+                        <input type="text" class="form-control" id="txtCustomerId">
+                        <label for="txtCustomerId">Customer ID</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="name">
-                        <label for="name">Customer Name</label>
+                        <input type="text" class="form-control" id="txtCustomerName">
+                        <label for="txtCustomerName">Customer Name</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="address">
-                        <label for="address">Customer Address</label>
+                        <input type="text" class="form-control" id="txtCustomerAddress">
+                        <label for="txtCustomerAddress">Customer Address</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="contact">
-                        <label for="contact">Customer Contact</label>
+                        <input type="number" class="form-control" id="txtCustomerContact">
+                        <label for="txtCustomerContact">Customer Contact</label>
                     </div>
                 </form>
 
                 <section>
                     <div class="col" style="text-align: center">
-                        <button id="addCustomer" type="button" class="btn btn-primary mt-3 mb-3">ADD</button>
-                        <button type="button" class="btn btn-success mt-3 mb-3 ms-3">UPDATE</button>
-                        <button type="button" class="btn btn-danger mt-3 mb-3 ms-3">DELETE</button>
-                        <button type="button" class="btn btn-secondary mt-3 mb-3 ms-3">BACK</button>
+                        <button id="btnCustomerSave" type="button" class="btn btn-primary mt-3 mb-3">ADD</button>
+                        <button id="btnCustomerUpdate" type="button" class="btn btn-success mt-3 mb-3 ms-3">UPDATE</button>
+                        <button id="btnCustomerDelete" type="button" class="btn btn-danger mt-3 mb-3 ms-3">DELETE</button>
+                        <button id="btnCustomerClear" type="button" class="btn btn-secondary mt-3 mb-3 ms-3">CLEAR</button>
                     </div>
                 </section>
             </section>
@@ -433,10 +433,10 @@
 
                 <section>
                     <div class="col" style="text-align: center">
-                        <button type="button" class="btn btn-primary mt-3 mb-3">ADD</button>
-                        <button type="button" class="btn btn-success mt-3 mb-3 ms-3">UPDATE</button>
-                        <button type="button" class="btn btn-danger mt-3 mb-3 ms-3">DELETE</button>
-                        <button type="button" class="btn btn-secondary mt-3 mb-3 ms-3">BACK</button>
+                        <button id="btnItemSave" type="button" class="btn btn-primary mt-3 mb-3">ADD</button>
+                        <button id="btnItemUpdate" type="button" class="btn btn-success mt-3 mb-3 ms-3">UPDATE</button>
+                        <button id="btnItemDelete" type="button" class="btn btn-danger mt-3 mb-3 ms-3">DELETE</button>
+                        <button id="btnItemClear" type="button" class="btn btn-secondary mt-3 mb-3 ms-3">CLEAR</button>
                     </div>
                 </section>
             </section>
@@ -494,6 +494,9 @@
 
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
-<script src="js.js"></script>
+<script src="db/DB.js"></script>
+<script src="controller/CustomerJs.js"></script>
+<script src="model/CustomerModel.js"></script>
+<script src="controller/validation/CustomerValidations.js"></script>
 </body>
 </html>
