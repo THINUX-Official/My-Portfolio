@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>POS</title>
-    <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/bootstrap.js"></script>
 </head>
 
 <body style="background-color: #000235">
@@ -14,9 +13,8 @@
 <header>
     <section class="thinux_navigation_bar">
         <nav class="navbar navbar-expand-lg " data-bs-theme="dark" style="background-color: black;">
-            <!--        <nav class="navbar navbar-expand-lg bg-body-tertiary">-->
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">THINUX</a>
+                <a class="navbar-brand" href="#">THINUX</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -28,17 +26,14 @@
                             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Customer.html">Customer</a>
+                            <a class="nav-link active" aria-current="page" href="pages/Customer.html">Customer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Order.html">Orders</a>
+                            <a class="nav-link active" aria-current="page" href="pages/Order.html">Orders</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Items.html">Items</a>
+                            <a class="nav-link active" aria-current="page" href="pages/Items.html">Items</a>
                         </li>
-                        <!--<li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>-->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                aria-expanded="false">
@@ -53,14 +48,7 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <!--<li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
-                        </li>-->
                     </ul>
-                    <!--<form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>-->
                 </div>
             </div>
         </nav>
@@ -68,63 +56,44 @@
 </header>
 
 <main>
-
-    <section class="cards">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <a href="Customer.html">
-                <div class="col">
-                    <div class="card h-100" style="width: 400px;">
-                        <img src="/assignment/css-framework/assets/img/customer.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h1 class="card-title">Customers</h1>
-                            <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>-->
+    <section class="container text" id="dashboard">
+        <div class="jumbotron pt-md-5">
+            <div id="home-tiles">
+                <div class="row ">
+                    <div class="col-lg-4 col-xl-4 mb-2">
+                        <div class="card">
+                            <div class="card-header bg-info font-weight-bolder">Customers</div>
+                            <div class="card-body">
+                                <img src="/assignment/css-framework/assets/img/customers_icon.png" alt="" width="75px"
+                                     class="d-inline-block align-text-center">
+                                <div class="dash-tile-text text-right text-black-50"><h2>5</h2></div>
+                            </div>
                         </div>
-                        <!--<div class="card-footer">
-                            <small class="text-body-secondary">Last updated 3 mins ago</small>
-                        </div>-->
+                    </div>
+                    <div class="col-lg-4 col-xl-4 mb-2">
+                        <div class="card">
+                            <div class="card-header bg-info font-weight-bolder">Items</div>
+                            <div class="card-body">
+                                <img src="/assignment/css-framework/assets/img/item_icon.png" alt="Logo" width="75px"
+                                     class="d-inline-block align-text-center">
+                                <div class="dash-tile-text text-right text-black-50"><h2>5</h2></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4 mb-2">
+                        <div class="card">
+                            <div class="card-header bg-info font-weight-bolder">Orders</div>
+                            <div class="card-body">
+                                <img src="/assignment/css-framework/assets/img/order_icon.png" alt="Logo" width="75px"
+                                     class="d-inline-block align-text-center">
+                                <div class="dash-tile-text text-right text-black-50"><h2>0</h2></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </a>
-            <a href="Order.html">
-                <div class="col">
-                    <div class="card h-100" style="width: 400px;">
-                        <img src="/assignment/css-framework/assets/img/order.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h1 class="card-title">Orders</h1>
-                            <!--<p class="card-text">This card has supporting text below as a natural lead-in to additional
-                                content.</p>-->
-                        </div>
-                        <!--<div class="card-footer">
-                            <small class="text-body-secondary">Last updated 3 mins ago</small>
-                        </div>-->
-                    </div>
-                </div>
-            </a>
-            <a href="Items.html">
-                <div class="col">
-                    <div class="card h-100" style="width: 400px;">
-                        <img src="/assignment/css-framework/assets/img/item.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h1 class="card-title">Items</h1>
-                            <!--<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This card has even longer content than the first to show that equal
-                                height action.</p>-->
-                        </div>
-                        <!--<div class="card-footer">
-                            <small class="text-body-secondary">Last updated 3 mins ago</small>
-                        </div>-->
-                    </div>
-                </div>
-            </a>
+            </div>
         </div>
     </section>
-
 </main>
-
-<footer>
-
-</footer>
-
 </body>
 </html>

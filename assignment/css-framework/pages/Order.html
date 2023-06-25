@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Orders</title>
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <script src="../assets/js/bootstrap.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="background-color: #000235">
+<header>
+    <section class="thinux_navigation_bar">
+        <nav class="navbar navbar-expand-lg " data-bs-theme="dark" style="background-color: black;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">THINUX</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Customer.html">Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Order.html">Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Items.html">Items</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Others
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+</header>
+
+<main>
+    <section class="container text" id="orderContent">
+
+        <section>
+            <h2 class="text-primary">
+                <img src="/assignment/css-framework/assets/img/order_icon.png" alt="Logo" width="75px"
+                     class="d-inline-block align-text-center">
+                ORDERS
+            </h2>
+        </section>
+
+        <section class="row mt-3 border border-dark rounded p-3" style="background-color: black">
+            <form action="">
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">CustomerID</span>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select ID</option>
+                                <option value="1">C001</option>
+                                <option value="2">C002</option>
+                                <option value="3">C003</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Customer Name</span>
+                            <input class="form-control" type="text" placeholder=""
+                                   aria-label="Disabled input example"
+                                   disabled>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Customer Contact</span>
+                            <input class="form-control" type="number" placeholder=""
+                                   aria-label="Disabled input example"
+                                   disabled>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Date</span>
+                            <input class="form-control" type="datetime-local">
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <div class="row mt-3 mb-3">
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Item ID</span>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select ID</option>
+                                <option value="1">I001</option>
+                                <option value="2">I002</option>
+                                <option value="3">I003</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Item Name</span>
+                            <input class="form-control" type="text" placeholder="" aria-label="Disabled input example"
+                                   disabled>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Item Price</span>
+                            <input class="form-control" type="number" placeholder="" aria-label="Disabled input example"
+                                   disabled>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Qty On Hand</span>
+                            <input class="form-control" type="number" placeholder="" aria-label="Disabled input example"
+                                   disabled>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">QTY</span>
+                            <input class="form-control" type="number" placeholder="">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-10"></div>
+                        <div class="col-2">
+                            <button type="button" class="btn btn-danger">CLEAR</button>
+                            <button type="button" class="btn btn-success ms-3">ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="row mt-3 border border-dark rounded p-3 object-fit-contain" style="background-color: black">
+            <div class="col">
+                <table class="table table-dark table-striped">
+                    <thead>
+                    <tr>
+                        <th style="background-color: blueviolet" scope="col">IID</th>
+                        <th style="background-color: blueviolet" scope="col">Name</th>
+                        <th style="background-color: blueviolet" scope="col">Qty</th>
+                        <th style="background-color: blueviolet" scope="col">Unit Price</th>
+                        <th style="background-color: blueviolet" scope="col">Total</th>
+                        <th style="background-color: blueviolet" scope="col">Action</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <th scope="col">I001</th>
+                        <th scope="col">T-Shirt</th>
+                        <th scope="col">2</th>
+                        <th scope="col">990.00</th>
+                        <th scope="col">1980.00</th>
+                        <th scope="col">
+                            <button type="button" class="btn btn-warning">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th scope="col">I002</th>
+                        <th scope="col">Shirt</th>
+                        <th scope="col">1</th>
+                        <th scope="col">1200.00</th>
+                        <th scope="col">1200.00</th>
+                        <th scope="col">
+                            <button type="button" class="btn btn-warning">Edit</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card text-bg-warning mb-3" style="max-width: 18rem;">
+                <h5 class="card-header">Total</h5>
+                <div class="card-body">
+                    <h2 class="card-title">3180.00</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-10"></div>
+                <div class="col-2">
+                    <button type="button" class="btn btn-danger">CANCEL</button>
+                    <button type="button" class="btn btn-primary ms-3">PURCH</button>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+</body>
+</html>
