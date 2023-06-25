@@ -84,13 +84,6 @@ function saveCustomer() {
         let customerAddress = $("#txtCustomerAddress").val();
         let customerContact = $("#txtCustomerContact").val();
 
-        /* var customerObject = {
-             id: customerId,
-             name: customerName,
-             address: customerAddress,
-             contact: customerContact
-         }*/
-
         let newCustomer = Object.assign({}, customerObject);
         newCustomer.id = customerId;
         newCustomer.name = customerName;
@@ -154,12 +147,12 @@ $("#btnDelete").click(function () {
             alert("Customer Successfully Deleted.");
             setTextFieldValues("", "", "", "");
         } else {
-            alert("No such customer to delete!");
+            alert("No such Customer to delete!");
         }
     }
 });
 
-function txtFieldsClear() {
+function customerTxtFieldsClear() {
     $('#txtCustomerId').val("");
     $('#txtCustomerName').val("");
     $('#txtCustomerAddress').val("");
@@ -167,7 +160,7 @@ function txtFieldsClear() {
 }
 
 $("#btnClear").click(function () {
-    txtFieldsClear();
+    customerTxtFieldsClear();
 });
 
 $("#btnUpdate").click(function () {
@@ -226,6 +219,7 @@ function searchCustomer(id) {
 
 function updateCustomer(customerID) {
     let customer = searchCustomer(customerID);
+
     if (customer != null) {
         customer.id = $("#txtCustomerId").val();
         customer.name = $("#txtCustomerName").val();

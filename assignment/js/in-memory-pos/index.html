@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="controller/validation/itemValidations.js"></script>
 </head>
 
 <body style="background-color: #000235">
@@ -170,9 +171,12 @@
                 <section>
                     <div class="col" style="text-align: center">
                         <button id="btnCustomerSave" type="button" class="btn btn-primary mt-3 mb-3">ADD</button>
-                        <button id="btnCustomerUpdate" type="button" class="btn btn-success mt-3 mb-3 ms-3">UPDATE</button>
-                        <button id="btnCustomerDelete" type="button" class="btn btn-danger mt-3 mb-3 ms-3">DELETE</button>
-                        <button id="btnCustomerClear" type="button" class="btn btn-secondary mt-3 mb-3 ms-3">CLEAR</button>
+                        <button id="btnCustomerUpdate" type="button" class="btn btn-success mt-3 mb-3 ms-3">UPDATE
+                        </button>
+                        <button id="btnCustomerDelete" type="button" class="btn btn-danger mt-3 mb-3 ms-3">DELETE
+                        </button>
+                        <button id="btnCustomerClear" type="button" class="btn btn-secondary mt-3 mb-3 ms-3">CLEAR
+                        </button>
                     </div>
                 </section>
             </section>
@@ -342,7 +346,7 @@
                 <table class="table table-dark table-striped">
                     <thead>
                     <tr>
-                        <th style="background-color: blueviolet" scope="col">IID</th>
+                        <th style="background-color: blueviolet" scope="col">itemId</th>
                         <th style="background-color: blueviolet" scope="col">Name</th>
                         <th style="background-color: blueviolet" scope="col">Qty</th>
                         <th style="background-color: blueviolet" scope="col">Unit Price</th>
@@ -411,23 +415,23 @@
 
                 <form>
                     <div class="form-floating mb-3 mt-3">
-                        <input type="text" class="form-control" id="iId">
-                        <label for="iId">Item ID</label>
+                        <input type="text" class="form-control" id="txtItemId">
+                        <label for="txtItemId">Item ID</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="name1">
-                        <label for="name1">Item Name</label>
+                        <input type="text" class="form-control" id="txtItemName">
+                        <label for="txtItemName">Item Name</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="price">
-                        <label for="price">Item Price</label>
+                        <input type="number" class="form-control" id="txtItemPrice">
+                        <label for="txtItemPrice">Item Price</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="qty">
-                        <label for="qty">Item Quantity</label>
+                        <input type="number" class="form-control" id="txtItemQty">
+                        <label for="txtItemQty">Item Quantity</label>
                     </div>
                 </form>
 
@@ -454,7 +458,7 @@
                     </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody id="tblItem">
                     <tr>
                         <th scope="row">I001</th>
                         <td>T-Shirts</td>
@@ -494,9 +498,16 @@
 
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
+
 <script src="db/DB.js"></script>
+
 <script src="controller/CustomerJs.js"></script>
 <script src="model/CustomerModel.js"></script>
 <script src="controller/validation/CustomerValidations.js"></script>
+
+<script src="controller/ItemJs.js"></script>
+<script src="model/ItemModel.js"></script>
+<script src="controller/validation/itemValidations.js"></script>
+
 </body>
 </html>

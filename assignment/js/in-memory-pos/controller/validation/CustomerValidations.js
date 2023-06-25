@@ -32,7 +32,6 @@ customerValidation.push({
     error: 'Customer Contact Pattern is Wrong : 077125147'
 });
 
-
 function clearCustomerInputFields() {
     $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").val("");
     $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").css("border", "1px solid #ced4da");
@@ -47,16 +46,13 @@ $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").on(
 
     let indexNo = customerValidation.indexOf(customerValidation.find((c) => c.field.attr("id") == e.target.id));
 
-
     if (e.key == "Tab") {
         e.preventDefault();
     }
 
-
     checkValidations(customerValidation[indexNo]);
 
     setBtn();
-
 
     if (e.key == "Enter") {
 
@@ -72,7 +68,6 @@ $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").on(
         }
     }
 });
-
 
 function checkValidations(object) {
     if (object.reg.test(object.field.val())) {
@@ -125,11 +120,7 @@ function setBtn() {
         $("#btnDelete").prop("disabled", false);
         $("#btnUpdate").prop("disabled", false);
     }
-
 }
-
-
-
 
 $('#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact').on('keyup', function (event) {
     checkCusValidity();
@@ -138,7 +129,6 @@ $('#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact').on(
 $('#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact').on('blur', function (event) {
     checkCusValidity();
 });
-
 
 function checkCusValidity() {
     let errorCounts = 0;
@@ -150,7 +140,6 @@ function checkCusValidity() {
             setCusTextError(validation.field, validation.error);
         }
     }
-
 }
 
 function checkCus(regex, txtField) {
