@@ -1,12 +1,39 @@
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 1441px) {
 
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1200px) {
+    html > body > footer > section > section > aside {
+        display: none;
+    }
+
+    html > body > footer > section > section > address > fieldset > input {
+        width: 90%;
+    }
+
+    textarea {
+        width: 90%;
+
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .in_black {
+        width: 403px;
+    }
+
+    body > main > section > aside > a > img {
+        width: 600px;
+        margin-left: -100px;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 769px) {
 
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
 
     /*Navigation_Bar/////////////////////////////////////////////////////////*/
     /*Home*/
@@ -20,7 +47,6 @@
     body > main > section > aside:nth-child(1) {
         width: 100%;
         height: 100%;
-
     }
 
     body > main > section > aside > header {
@@ -28,6 +54,10 @@
         font-family: Poppins;
         font-size: 50px;
         text-align: center;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 
     /*Typing Image*/
@@ -69,20 +99,39 @@
     }
 
     /*About Me*/
+    section > p:nth-child(1) {
+        position: relative;
+        flex-direction: column;
+        font-size: 11px;
+    }
+
+    section > p:nth-child(2) {
+        position: relative;
+        flex-direction: column;
+        font-size: 11px;
+    }
+
+    section > p:nth-child(3) {
+        position: relative;
+        flex-direction: column;
+        font-size: 11px;
+    }
+
     .my_details {
         position: relative;
         width: 100%;
         height: 420px;
-        left: 0;
+        left: 15px;
         right: 0;
-        margin: auto;
+        /*margin-: auto;*/
+        justify-content: center;
     }
 
     .download_section {
         position: relative;
         width: 100%;
         height: 30px;
-        left: 30px;
+        left: 45px;
         right: 0;
         margin: auto;
     }
@@ -104,12 +153,12 @@
         height: 200px;
     }
 
-    html > body > footer > section > address > fieldset > input {
-        width: 75%;
+    html > body > footer > section > section > address > fieldset > input {
+        width: 295px;
     }
 
     textarea {
-        width: 75%;
+        width: 295px;
     }
 
     html > body > footer > section > address > fieldset > button {
@@ -169,31 +218,131 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 376px) {
 
-}
-
-@media screen and (max-width: 1024px) {
-
-}
-
-@media screen and (max-width: 1440px) {
-
-}
-
-@media screen and (max-width: 1199px) {
-    html > body > footer > section > section > aside {
-        display: none;
+    /*About Me*/
+    .my_details {
+        position: relative;
+        width: 100%;
+        height: 420px;
+        left: -10px;
+        right: 0;
+        /*margin-: auto;*/
+        justify-content: center;
     }
 
+    .download_section {
+        position: relative;
+        width: 100%;
+        height: 30px;
+        left: 20px;
+        right: 0;
+        margin: auto;
+    }
+
+    /*ContactMe//////////////////////////////////////////////////////////////*/
     html > body > footer > section > section > address > fieldset > input {
-        width: 90%;
+        width: 250px;
     }
 
     textarea {
-        width: 90%;
-
+        width: 250px;
     }
 }
+
+@media screen and (max-width: 321px) {
+    /*My DP*/
+    body > main > section > aside:nth-child(2) figure > img {
+        margin-top: 200px;
+        width: 290px;
+    }
+
+    html > body > main > section > aside > a {
+        margin-left: 125px;
+        width: 50px;
+        z-index: 1;
+    }
+
+    body > main > section > aside > a > img {
+        width: 260px;
+        margin-left: -100px;
+        z-index: 1;
+    }
+
+    nav > figure > img {
+        height: 60px;
+    }
+
+    body > main > section > aside > aside > nav {
+        align-items: center;
+        justify-content: center;
+        margin-top: 450px;
+    }
+
+
+    element.style {
+    }
+
+    body > main > section > aside > aside {
+        width: 94vw;
+        margin-top: 450px;
+        z-index: 5;
+    }
+
+    /*Contact me*/
+    html > body > footer > section > section > address > fieldset > input {
+        width: 195px;
+    }
+
+    textarea {
+        width: 195px;
+    }
+
+    /*About Me*/
+    html > body > main > section > div:nth-child(1) {
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        /* background-color: black; */
+        margin-bottom: 20px;
+        height: 60px;
+        position: sticky;
+        top: 60px;
+    }
+    .my_details {
+        position: relative;
+        width: 100%;
+        height: 420px;
+        left: -39px;
+        right: 0;
+        justify-content: center;
+    }
+
+    .download_section {
+        position: absolute;
+        width: 300px;
+        height: 20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .download_section > button {
+        width: 100px;
+    }
+
+    html > body > main > section > div:nth-child(1) {
+        /*background-color: rgba(0, 0, 0, 0.5);*/
+        /*background-color: black;*/
+        margin-bottom: 20px;
+        height: 60px;
+        position: sticky;
+        top: 60px;
+    }
+}
+
+
+
+
+
+
 
 
