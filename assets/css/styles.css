@@ -539,6 +539,22 @@ label {
     position: relative;
 }
 
+.meetUp {
+    display: flex;
+    /*left: 20px;*/
+}
+
+/*html > body > main#home > section.funActivity > div.meetUp > img {
+    left: 20px;
+}*/
+
+/*Social Activity*/
+
+.valentine {
+    display: flex;
+
+}
+
 
 /*Gallery////////////////////////////////////////////////////////////////*/
 .gallery {
