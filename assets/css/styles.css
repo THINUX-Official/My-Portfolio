@@ -507,6 +507,38 @@ label {
     }
 }
 
+/*Skills*/
+.certificates {
+    position: relative;
+    display: flex;
+}
+
+.hackerRank {
+    position: absolute;
+    /*width: 100px;*/
+    left: 40px;
+}
+
+.soloLearn {
+    position: absolute;
+    /*width: 100px;*/
+    right: 40px;
+
+}
+
+.icons {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: 70vh;
+}
+
+/*Fun Activity*/
+
+.funActivity {
+    position: relative;
+}
+
 
 /*Gallery////////////////////////////////////////////////////////////////*/
 .gallery {
