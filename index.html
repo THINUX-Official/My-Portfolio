@@ -22,6 +22,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/normalize.css">
+<!--    <link rel="stylesheet" href="assets/css/Loading.css">-->
+    <link rel="stylesheet" href="assets/css/lorderSvg.css">
 </head>
 
 <body>
@@ -784,6 +786,33 @@
 <a href="http://thinux.epizy.com/?i=1" target="_blank">Refresh</a>
 <a href="https://www.youtube.com/channel/UCQhRmckfOuvlmVBGyu2dKBA" target="_blank">You Tube</a>-->
 
+<div id="loader">
+    <div>
+        <div class="main-page">
+            <div class="loader">
+                <div class="spin-blend"></div>
+                <div class="spin-blend"></div>
+                <div class="spin-blend"></div>
+                <div class="spin-blend"></div>
+                <div class="spin-blend"></div>
+            </div>
+            <div class="loading-text">
+                <div class="letter">T</div>
+                <div class="letter">H</div>
+                <div class="letter">I</div>
+                <div class="letter">N</div>
+                <div class="letter">U</div>
+                <div class="letter">X</div>
+                <div class="letter">.</div>
+                <div class="letter">.</div>
+                <div class="letter">.</div>
+                <div class="letter">.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script>
     let loadMoreBtn = document.querySelector('.load_more');
     let currentItem = 3;
@@ -808,6 +837,10 @@
         navBar.classList.toggle("active");
     }
 </script>
+
+<script src="assets/js/lordersSvg.js"></script>
+
+
 
 </body>
 </html>
