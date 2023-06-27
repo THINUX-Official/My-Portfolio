@@ -303,6 +303,15 @@ body > main > section:nth-child(2) {
     margin: auto;
 }
 
+#download_button {
+    width: 155px;
+    margin-right: 10px;
+}
+
+#hire_me_button {
+    width: 155px;
+}
+
 .box {
     width: 300px;
     height: 30px;
@@ -376,6 +385,12 @@ label {
 
 /*html > body > main > section > section > aside.skillBar {
 }*/
+
+/*Projects*/
+
+.projects {
+    margin-top: 100px;
+}
 
 /*Assignments*/
 .assignment_container {
@@ -513,15 +528,24 @@ label {
     display: flex;
 }
 
+html > body > main > section > section.certificates > div > img {
+    flex-direction: row;
+}
+
+.certificates img {
+    position: absolute;
+    flex-direction: row;
+}
+
 .hackerRank {
     position: absolute;
-    /*width: 100px;*/
+    width: 650px;
     left: 40px;
 }
 
 .soloLearn {
     position: absolute;
-    /*width: 100px;*/
+    width: 650px;
     right: 40px;
 
 }
@@ -530,7 +554,7 @@ label {
     display: flex;
     position: relative;
     justify-content: center;
-    margin-top: 70vh;
+    margin-top: 500px;
 }
 
 /*Fun Activity*/
@@ -539,9 +563,17 @@ label {
     position: relative;
 }
 
+html > body > main#home > section.funActivity > div.meetUp > img {
+    width: 1200px;
+}
+
+html > body > main#home > section > div.valentine > img {
+    width: 600px;
+
+}
+
 .meetUp {
     display: flex;
-    /*left: 20px;*/
 }
 
 /*html > body > main#home > section.funActivity > div.meetUp > img {
@@ -552,7 +584,6 @@ label {
 
 .valentine {
     display: flex;
-
 }
 
 

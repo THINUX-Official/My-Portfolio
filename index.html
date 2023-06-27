@@ -192,9 +192,8 @@
             </aside>
 
             <aside class="download_section">
-                <button style="width: 155px; margin-right: 10px;"><a href="ORM.pdf" download="cv.pdf">Download My CV</a>
-                </button>
-                <button style="width: 155px"><a href="">Hire Me</a></button>
+                <button id="download_button"><a href="ORM.pdf" download="cv.pdf">Download My CV</a></button>
+                <button id="hire_me_button"><a href="">Hire Me</a></button>
             </aside>
 
             <!--<aside class="skillBar">
@@ -245,57 +244,57 @@
     <br>
     <br>
     <!--My Project-->
-    <section>
+    <section class="projects">
         <div>
             <header>
                 <dfn id="projects">Projects</dfn></header>
         </div>
 
 
-            <div class="assignment_container">
-                <!--    <h1 class="assignment_heading">CSS</h1>-->
-                <div class="assignment_box_container">
+        <div class="assignment_container">
+            <!--    <h1 class="assignment_heading">CSS</h1>-->
+            <div class="assignment_box_container">
 
-                    <div class="assignment_box">
-                        <div class="assignment_image">
-                            <img src="assets/img/connect%204%20games.png" alt="">
-                            <!--                    <img src="/assignment/css/img/case1.png" alt="">-->
-                        </div>
-                        <div class="assignment_content">
-                            <h3>Connect Four Game</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="https://github.com/THINUX-Official/connect-four-game"
-                               class="assignment_button">Read More</a>
-                            <div class="assignment_icon">
-                                <span> <i class="fas fa-user"></i>by THINUX</span>
-                            </div>
+                <div class="assignment_box">
+                    <div class="assignment_image">
+                        <img src="assets/img/connect%204%20games.png" alt="">
+                        <!--                    <img src="/assignment/css/img/case1.png" alt="">-->
+                    </div>
+                    <div class="assignment_content">
+                        <h3>Connect Four Game</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <a href="https://github.com/THINUX-Official/connect-four-game"
+                           class="assignment_button">Read More</a>
+                        <div class="assignment_icon">
+                            <span> <i class="fas fa-user"></i>by THINUX</span>
                         </div>
                     </div>
+                </div>
 
-                    <div class="assignment_box">
-                        <div class="assignment_image">
-                            <img src="assets/img/salon%20management%20system.png" alt="">
-                            <!--                    <img src="/assignment/css/img/case1.png" alt="">-->
-                        </div>
-                        <div class="assignment_content">
-                            <h3>Saloon Management System</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                            <a href="https://github.com/THINUX-Official/salon"
-                               class="assignment_button">Read More</a>
-                            <div class="assignment_icon">
-                                <span> <i class="fas fa-user"></i>by THINUX</span>
-                            </div>
+                <div class="assignment_box">
+                    <div class="assignment_image">
+                        <img src="assets/img/salon%20management%20system.png" alt="">
+                        <!--                    <img src="/assignment/css/img/case1.png" alt="">-->
+                    </div>
+                    <div class="assignment_content">
+                        <h3>Saloon Management System</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <a href="https://github.com/THINUX-Official/salon"
+                           class="assignment_button">Read More</a>
+                        <div class="assignment_icon">
+                            <span> <i class="fas fa-user"></i>by THINUX</span>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!--<object data="assets/pdf/ORM.pdf" type="application/pdf" height="600"></object>
-            <iframe src="https://ijse.lk/" width="800" height="600"></iframe>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/1Y760sJRhnM"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>-->
+        <!--<object data="assets/pdf/ORM.pdf" type="application/pdf" height="600"></object>
+        <iframe src="https://ijse.lk/" width="800" height="600"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1Y760sJRhnM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>-->
 
     </section>
 
@@ -564,13 +563,15 @@
                 <dfn id="skills">Skills</dfn></header>
         </div>
 
-        <section>
-            <div class="certificates">
-                <img src="assets/img/hackerRank.png" alt="" width="45%" class="hackerRank">
-                <img src="assets/img/soloLern.png" alt="" width="45%" class="soloLearn">
+        <section class="certificates">
+            <div>
+                <img src="assets/img/hackerRank.png" alt="" class="hackerRank">
+            </div>
+            <div>
+                <img src="assets/img/soloLearn.png" alt="" class="soloLearn">
             </div>
         </section>
-        
+
         <section class="icons">
             <div><img src="assets/icon/icons8-java-100.png" alt=""></div>
             <div><img src="assets/icon/icons8-mysql-100.png" alt=""></div>
@@ -585,7 +586,7 @@
 
         </section>
 
-        
+
     </section>
 
     <hr>
@@ -599,15 +600,15 @@
         </div>
 
         <aside>
-           <!-- <video controls width="1080">
-                <source src="assets/videos/DJI_0291.MP4" type="video/mp4">
-                <track default kind="captions" srclang="en" src="assets/videos/sub.vtt">
-                <a href="assets/videos/sub.vtt"></a>
-            </video>-->
+            <!-- <video controls width="1080">
+                 <source src="assets/videos/DJI_0291.MP4" type="video/mp4">
+                 <track default kind="captions" srclang="en" src="assets/videos/sub.vtt">
+                 <a href="assets/videos/sub.vtt"></a>
+             </video>-->
         </aside>
-        
+
         <div class="meetUp">
-            <img src="assets/img/meetUp.jpg" width="80%" alt="">
+            <img src="assets/img/meetUp.jpg" alt="">
 
             <article>
                 <p>In 2022, our batch had a meetup where we played cricket and bonded with new friends.
@@ -631,10 +632,10 @@
         <div>
             <header>Social Activities</header>
         </div>
-        
+
         <div class="valentine">
-            <img src="assets/img/valantines.jpeg" width="40%" alt="">
-            <img src="assets/img/valantines%20(2).jpeg" width="40%" alt="">
+            <img src="assets/img/valantines.jpeg" alt="">
+            <img src="assets/img/valantines%20(2).jpeg" alt="">
 
             <article>
                 <p>On Valentine's Day 2021, my friends and I decided to spread love and kindness by giving to the less
@@ -643,7 +644,8 @@
                     We gave them what we could and saw the happiness on their faces.
                     It was a humbling experience to see how little things could mean so much to someone else.
                     This act of giving reminded us of the importance of compassion and empathy in our lives.
-                    It was a beautiful way to celebrate Valentine's Day, and we left feeling fulfilled and grateful for the
+                    It was a beautiful way to celebrate Valentine's Day, and we left feeling fulfilled and grateful for
+                    the
                     opportunity to make a difference in someone's life.</p>
             </article>
         </div>

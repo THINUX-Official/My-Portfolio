@@ -1,8 +1,21 @@
 @media screen and (max-width: 1441px) {
+    html > body > main#home > section.funActivity > div.meetUp > img {
+        width: 1100px;
+    }
 
+    html > body > main#home > section > div.valentine > img {
+        width: 550px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
+    .icons {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        margin-top: 350px;
+    }
+
     html > body > footer > section > section > aside {
         display: none;
     }
@@ -27,9 +40,108 @@
         margin-left: -100px;
         z-index: 1;
     }
+
+    .hackerRank {
+        position: absolute;
+        width: 450px;
+        left: 40px;
+    }
+
+    .soloLearn {
+        position: absolute;
+        width: 450px;
+        right: 40px;
+
+    }
+
+    .icons {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        margin-top: 350px;
+    }
+
+    html > body > main#home > section.funActivity > div.meetUp > img {
+        width: 800px;
+    }
+
+    html > body > main#home > section > div.valentine > img {
+        width: 400px;
+    }
 }
 
 @media screen and (max-width: 769px) {
+    /*dp*/
+    body > main > section > aside:nth-child(2) figure > img {
+        margin-top: 200px;
+        width: 290px;
+    }
+
+    .projects {
+        margin-top: 150px;
+    }
+
+    .certificates img {
+        position: absolute;
+        flex-direction: row;
+    }
+
+    .hackerRank {
+        position: absolute;
+        flex-direction: row;
+        width: 300px;
+        left: 40px;
+    }
+
+    .soloLearn {
+        position: absolute;
+        flex-direction: row;
+        width: 300px;
+        right: 40px
+    }
+
+    .icons {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        margin-top: 250px;
+    }
+
+    html > body > main#home > section > section.certificates > div > img {
+        /*width: 43%;*/
+    }
+
+    html > body > main#home > section > section.icons > div > img {
+        width: 70px;
+    }
+
+    /*Activity*/
+    html > body > main#home > section.funActivity > div.meetUp > img {
+        width: 500px;
+    }
+
+    html > body > main#home > section > div.valentine > img {
+        width: 250px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    #download_button {
+        margin-left: 25px;
+        width: 155px;
+        margin-right: 10px;
+    }
+
+    /*Contact me*/
+    html > body > footer > section > section > address > fieldset > input {
+        width: 635px;
+    }
+
+    textarea {
+        width: 635px;
+    }
 
 }
 
@@ -141,6 +253,72 @@
         height: 1000px;
     }
 
+    #download_button {
+        margin-left: 0px;
+        width: 155px;
+        margin-right: 10px;
+    }
+
+    .projects {
+        margin-top: 20px;
+    }
+
+    .certificates {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .certificates .hackerRank {
+        position: relative;
+        flex-direction: column;
+        width: 350px;
+        left: 30px;
+
+    }
+
+    .certificates .soloLearn {
+        position: relative;
+        left: 30px;
+        flex-direction: column;
+        width: 350px;
+
+    }
+
+    .icons {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    html > body > main#home > section > section.icons > div > img {
+        width: 40px;
+    }
+
+    /*Activity*/
+    .meetUp {
+        display: inline-block;
+    }
+
+    .valentine {
+        display: inline-block;
+    }
+
+    /*html > body > main#home > section > div.valentine > article > p {
+        display: inline-block;
+    }*/
+
+    html > body > main#home > section.funActivity > div.meetUp > img {
+        width: 380px;
+        margin-left: 10px;
+    }
+
+    html > body > main#home > section > div.valentine > img {
+        width: 190px;
+        margin-left: 10px;
+
+    }
+
     /*ContactMe//////////////////////////////////////////////////////////////*/
     .contact_me_section {
         position: relative;
@@ -240,6 +418,44 @@
         margin: auto;
     }
 
+    .projects {
+        margin-top: 100px;
+    }
+
+    /*Skills*/
+    .certificates .hackerRank {
+        position: relative;
+        flex-direction: column;
+        width: 300px;
+        left: 30px;
+
+    }
+
+    .certificates .soloLearn {
+        position: relative;
+        left: 30px;
+        flex-direction: column;
+        width: 300px;
+
+    }
+
+    html > body > main#home > section > section.icons > div > img {
+        width: 35px;
+    }
+
+    /*Activity*/
+
+    html > body > main#home > section.funActivity > div.meetUp > img {
+        width: 340px;
+        margin-left: 10px;
+    }
+
+    html > body > main#home > section > div.valentine > img {
+        width: 162px;
+        margin-left: 10px;
+    }
+
+
     /*ContactMe//////////////////////////////////////////////////////////////*/
     html > body > footer > section > section > address > fieldset > input {
         width: 250px;
@@ -289,6 +505,16 @@
         z-index: 5;
     }
 
+    #download_button {
+        margin-left: 0px;
+        width: 151px;
+        margin-right: 10px;
+    }
+
+    #hire_me_button {
+        width: 134px;
+    }
+
     /*Contact me*/
     html > body > footer > section > section > address > fieldset > input {
         width: 195px;
@@ -299,6 +525,10 @@
     }
 
     /*About Me*/
+    .about_me_section {
+        margin-top: 0px;
+    }
+
     html > body > main > section > div:nth-child(1) {
         /* background-color: rgba(0, 0, 0, 0.5); */
         /* background-color: black; */
@@ -307,6 +537,7 @@
         position: sticky;
         top: 60px;
     }
+
     .my_details {
         position: relative;
         width: 100%;
@@ -325,8 +556,14 @@
         margin: auto;
     }
 
-    .download_section > button {
+   /* .download_section > button {
         width: 100px;
+    }*/
+
+    html > body > main#home > section.about_me_section> section.my_details > aside.download_section> button:nth-child(2){
+        width: 134px;
+        margin-right: 10px;
+        /*margin-left: 212px;*/
     }
 
     html > body > main > section > div:nth-child(1) {
@@ -337,6 +574,45 @@
         position: sticky;
         top: 60px;
     }
+
+    .projects {
+        margin-top: 200px;
+    }
+
+    /*Skills*/
+    .certificates .hackerRank {
+        position: relative;
+        flex-direction: column;
+        width: 280px;
+        left: 10px;
+
+    }
+
+    .certificates .soloLearn {
+        position: relative;
+        left: 10px;
+        flex-direction: column;
+        width: 280px;
+
+    }
+
+    html > body > main#home > section > section.icons > div > img {
+        width: 30px;
+    }
+
+    /*Activity*/
+
+    html > body > main#home > section.funActivity > div.meetUp > img {
+        width: 285px;
+        margin-left: 10px;
+    }
+
+    html > body > main#home > section > div.valentine > img {
+        width: 135px;
+        margin-left: 10px;
+    }
+
+
 }
 
 
