@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="controller/validation/itemValidations.js"></script>
 </head>
 
 <body style="background-color: #000235">
@@ -33,7 +32,7 @@
                             <a class="nav-link active" aria-current="page" href="#" id="orders">Orders</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#" id="item">Items</a>
+                            <a class="nav-link active" aria-current="page" href="#" id="items">Items</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -148,34 +147,38 @@
 
                 <form>
                     <div class="form-floating mb-3 mt-3">
-                        <input type="text" class="form-control" id="txtCustomerId">
+                        <input type="text" class="form-control" id="txtCustomerID" aria-describedby="emailHelp">
+                        <span class="control-error" style="color: red" id="lblCusId"></span>
                         <label for="txtCustomerId">Customer ID</label>
                     </div>
 
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="txtCustomerName">
+                        <span class="control-error" style="color: red" id="lblCusName"></span>
                         <label for="txtCustomerName">Customer Name</label>
                     </div>
 
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="txtCustomerAddress">
+                        <span class="control-error" style="color: red" id="lblCusAddress"></span>
                         <label for="txtCustomerAddress">Customer Address</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="txtCustomerContact">
+                        <input type="text" class="form-control" id="txtCustomerContact">
+                        <span class="control-error" style="color: red" id="lblContact"></span>
                         <label for="txtCustomerContact">Customer Contact</label>
                     </div>
                 </form>
 
                 <section>
                     <div class="col" style="text-align: center">
-                        <button id="btnCustomerSave" type="button" class="btn btn-primary mt-3 mb-3">ADD</button>
-                        <button id="btnCustomerUpdate" type="button" class="btn btn-success mt-3 mb-3 ms-3">UPDATE
+                        <button id="save" type="button" class="btn btn-primary mt-3 mb-3">ADD</button>
+                        <button id="btnUpdate" type="button" class="btn btn-success mt-3 mb-3 ms-3">UPDATE
                         </button>
-                        <button id="btnCustomerDelete" type="button" class="btn btn-danger mt-3 mb-3 ms-3">DELETE
+                        <button id="btnDelete" type="button" class="btn btn-danger mt-3 mb-3 ms-3">DELETE
                         </button>
-                        <button id="btnCustomerClear" type="button" class="btn btn-secondary mt-3 mb-3 ms-3">CLEAR
+                        <button id="btnClear" type="button" class="btn btn-secondary mt-3 mb-3 ms-3">CLEAR
                         </button>
                     </div>
                 </section>
@@ -196,12 +199,12 @@
 
                     <tbody id="tblCustomer">
                     <tr>
-                        <th scope="row">C001</th>
+                        <th scope="row">C00-001</th>
                         <td>Thinusha</td>
                         <td>Galle</td>
                         <td>0774002633</td>
                     </tr>
-                    <tr>
+                    <!--<tr>
                         <th scope="row">C002</th>
                         <td>Supun</td>
                         <td>Galle</td>
@@ -224,7 +227,7 @@
                         <td>Kavindi</td>
                         <td>Galle</td>
                         <td>0774002633</td>
-                    </tr>
+                    </tr>-->
                     </tbody>
                 </table>
             </section>
@@ -247,14 +250,23 @@
         <section class="row mt-3 border border-dark rounded p-3" style="background-color: black">
             <form action="">
                 <div class="row">
+
                     <div class="col">
                         <div class="input-group">
-                            <span class="input-group-text">CustomerID</span>
-                            <select class="form-select" id="cusIdOrder" aria-label="Default select example">
-                                <option selected>Select ID</option>
-                                <option value="1">C001</option>
-                                <option value="2">C002</option>
-                                <option value="3">C003</option>
+                            <span class="input-group-text">Order ID</span>
+                            <input class="form-control" type="text" id="orderId" placeholder="OD-001"
+                                   aria-label="Disabled input example">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="input-group">
+                            <span class="input-group-text">Customer ID</span>
+                            <select class="form-select" id="customerOrdID" aria-label="Default select example">
+                                <!--                                <option selected>Select ID</option>-->
+                                <!--                                <option value="1">C001</option>-->
+                                <!--                                <option value="2">C002</option>-->
+                                <!--                                <option value="3">C003</option>-->
                             </select>
                         </div>
                     </div>
@@ -262,25 +274,25 @@
                     <div class="col">
                         <div class="input-group">
                             <span class="input-group-text">Customer Name</span>
-                            <input class="form-control" id="cusNameOrder" type="text" placeholder=""
-                                   aria-label="Disabled input example"
-                                   disabled>
+                            <input class="form-control" id="customerNameOrd" type="text" placeholder="Name"
+                                   aria-label="Disabled input example" disabled>
                         </div>
                     </div>
 
-                    <div class="col">
+                    <!--<div class="col">
                         <div class="input-group">
                             <span class="input-group-text">Customer Contact</span>
                             <input class="form-control" id="cusContactOrder" type="number" placeholder=""
                                    aria-label="Disabled input example"
                                    disabled>
                         </div>
-                    </div>
+                    </div>-->
 
                     <div class="col">
                         <div class="input-group">
                             <span class="input-group-text">Date</span>
-                            <input class="form-control" id="orderDate" type="datetime-local">
+                            <input class="form-control" type="date" placeholder="2023-05-21"
+                                   aria-label="Disabled input example">
                         </div>
                     </div>
                 </div>
@@ -290,11 +302,11 @@
                     <div class="col">
                         <div class="input-group">
                             <span class="input-group-text">Item ID</span>
-                            <select class="form-select" id="itemIdOrder" aria-label="Default select example">
-                                <option selected>Select ID</option>
-                                <option value="1">I001</option>
-                                <option value="2">I002</option>
-                                <option value="3">I003</option>
+                            <select class="form-select" id="itemIdOrd" aria-label="Default select example">
+                                <!--                                <option selected>Select ID</option>-->
+                                <!--                                <option value="1">I001</option>-->
+                                <!--                                <option value="2">I002</option>-->
+                                <!--                                <option value="3">I003</option>-->
                             </select>
                         </div>
                     </div>
@@ -302,31 +314,32 @@
                     <div class="col">
                         <div class="input-group">
                             <span class="input-group-text">Item Name</span>
-                            <input class="form-control" id="itemNameOrder" type="text" placeholder="" aria-label="Disabled input example"
-                                   disabled>
+                            <input class="form-control" id="item" type="text" placeholder="Ram"
+                                   aria-label="Disabled input example" disabled>
                         </div>
                     </div>
 
                     <div class="col">
                         <div class="input-group">
                             <span class="input-group-text">Item Price</span>
-                            <input class="form-control" id="itemPriceOrder" type="number" placeholder="" aria-label="Disabled input example"
-                                   disabled>
+                            <input class="form-control" id="priceOrd" type="text" placeholder="2000.00"
+                                   aria-label="Disabled input example" disabled>
                         </div>
                     </div>
 
                     <div class="col">
                         <div class="input-group">
                             <span class="input-group-text">Qty On Hand</span>
-                            <input class="form-control" id="itemQtyOnHandOrder" type="number" placeholder="" aria-label="Disabled input example"
-                                   disabled>
+                            <input class="form-control" id="qtyOnHandOrd" type="text" placeholder="10"
+                                   aria-label="Disabled input example" disabled>
                         </div>
                     </div>
 
                     <div class="col">
                         <div class="input-group">
                             <span class="input-group-text">QTY</span>
-                            <input class="form-control" id="itemQtyOrder" type="number" placeholder="">
+                            <input class="form-control" id="orderQty" type="text" placeholder=""
+                                   aria-label="Disabled input example">
                         </div>
                     </div>
 
@@ -334,7 +347,7 @@
                         <div class="col-10"></div>
                         <div class="col-2">
                             <button type="button" class="btn btn-danger">CLEAR</button>
-                            <button type="button" class="btn btn-success ms-3">ADD</button>
+                            <button type="button" id="btnAddToCart" class="btn btn-success ms-3">ADD</button>
                         </div>
                     </div>
                 </div>
@@ -351,33 +364,33 @@
                         <th style="background-color: blueviolet" scope="col">Qty</th>
                         <th style="background-color: blueviolet" scope="col">Unit Price</th>
                         <th style="background-color: blueviolet" scope="col">Total</th>
-                        <th style="background-color: blueviolet" scope="col">Action</th>
+                        <!--                        <th style="background-color: blueviolet" scope="col">Action</th>-->
                     </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody id="tblCart">
                     <tr>
-                        <th scope="col">I001</th>
-                        <th scope="col">T-Shirt</th>
-                        <th scope="col">2</th>
-                        <th scope="col">990.00</th>
-                        <th scope="col">1980.00</th>
-                        <th scope="col">
+                        <!--                        <th scope="col">I001</th>-->
+                        <!--                        <th scope="col">T-Shirt</th>-->
+                        <!--                        <th scope="col">2</th>-->
+                        <!--                        <th scope="col">990.00</th>-->
+                        <!--                        <th scope="col">1980.00</th>-->
+                        <!--<th scope="col">
                             <button type="button" class="btn btn-warning">Edit</button>
                             <button type="button" class="btn btn-danger">Delete</button>
-                        </th>
+                        </th>-->
                     </tr>
 
                     <tr>
-                        <th scope="col">I002</th>
-                        <th scope="col">Shirt</th>
-                        <th scope="col">1</th>
-                        <th scope="col">1200.00</th>
-                        <th scope="col">1200.00</th>
-                        <th scope="col">
+                        <!--                        <th scope="col">I002</th>-->
+                        <!--                        <th scope="col">Shirt</th>-->
+                        <!--                        <th scope="col">1</th>-->
+                        <!--                        <th scope="col">1200.00</th>-->
+                        <!--                        <th scope="col">1200.00</th>-->
+                        <!--<th scope="col">
                             <button type="button" class="btn btn-warning">Edit</button>
                             <button type="button" class="btn btn-danger">Delete</button>
-                        </th>
+                        </th>-->
                     </tr>
                     </tbody>
                 </table>
@@ -386,15 +399,16 @@
             <div class="card text-bg-warning mb-3" style="max-width: 18rem;">
                 <h5 class="card-header">Total</h5>
                 <div class="card-body">
-                    <h2 class="card-title">3180.00</h2>
+                    <!--                    <h2 class="card-title">3180.00</h2>-->
+                    <input type="number" readonly class="form-control p-1 fs-6 fw-bolder " id="total" value="00000.00">
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-10"></div>
                 <div class="col-2">
-                    <button type="button" class="btn btn-danger">CANCEL</button>
-                    <button type="button" class="btn btn-primary ms-3">PURCH</button>
+                    <!--                    <button type="button" class="btn btn-danger">CANCEL</button>-->
+                    <button type="button" id="purchaseOrder" class="btn btn-primary ms-3">PURCH</button>
                 </div>
             </div>
         </section>
@@ -415,22 +429,26 @@
 
                 <form>
                     <div class="form-floating mb-3 mt-3">
-                        <input type="text" class="form-control" id="txtItemId">
+                        <input type="text" class="form-control" id="txtItemId" aria-describedby="emailHelp">
+                        <span class="control-error" style="color: red" id="lblItemId"></span>
                         <label for="txtItemId">Item ID</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="txtItemName">
-                        <label for="txtItemName">Item Name</label>
+                        <input type="text" class="form-control" id="txtItemDescription">
+                        <span class="control-error" style="color: red" id="lblItemDesc"></span>
+                        <label for="txtItemDescription">Item Name</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="txtItemPrice">
-                        <label for="txtItemPrice">Item Price</label>
+                        <input type="text" class="form-control" id="txtItemUnitprice">
+                        <span class="control-error" style="color: red" id="lblItemUnit"></span>
+                        <label for="txtItemUnitprice">Item Price</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="number" class="form-control" id="txtItemQty">
+                        <input type="text" class="form-control" id="txtItemQty">
+                        <span class="control-error" style="color: red" id="lblItemQty"></span>
                         <label for="txtItemQty">Item Quantity</label>
                     </div>
                 </form>
@@ -438,9 +456,11 @@
                 <section>
                     <div class="col" style="text-align: center">
                         <button id="btnItemSave" type="button" class="btn btn-primary mt-3 mb-3">ADD</button>
-                        <button id="btnItemUpdate" type="button" class="btn btn-success mt-3 mb-3 ms-3">UPDATE</button>
+                        <button id="btnItemUpdate" type="button" class="btn btn-success mt-3 mb-3 ms-3" disabled>
+                            UPDATE
+                        </button>
                         <button id="btnItemDelete" type="button" class="btn btn-danger mt-3 mb-3 ms-3">DELETE</button>
-                        <button id="btnItemClear" type="button" class="btn btn-secondary mt-3 mb-3 ms-3">CLEAR</button>
+                        <button id="btnClearItem" type="button" class="btn btn-secondary mt-3 mb-3 ms-3">CLEAR</button>
                     </div>
                 </section>
             </section>
@@ -465,7 +485,7 @@
                         <td>990.00</td>
                         <td>100</td>
                     </tr>
-                    <tr>
+                    <!--<tr>
                         <th scope="row">I002</th>
                         <td>Shirts</td>
                         <td>1200.00</td>
@@ -488,7 +508,7 @@
                         <td>Denims</td>
                         <td>3500.00</td>
                         <td>30</td>
-                    </tr>
+                    </tr>-->
                     </tbody>
                 </table>
             </section>
@@ -499,14 +519,15 @@
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 
-<script src="db/DB.js"></script>
-
-<script src="controller/CustomerJs.js"></script>
-<script src="model/CustomerModel.js"></script>
+<script src="db/db.js"></script>
+<script src="model/customerModel.js"></script>
+<script src="model/itemModel.js"></script>
+<script src="model/ordersModel.js"></script>
+<script src="model/cartModel.js"></script>
+<script src="controller/customerJs.js"></script>
+<script src="controller/itemJs.js"></script>
+<script src="controller/orderJs.js"></script>
 <script src="controller/validation/CustomerValidations.js"></script>
-
-<script src="controller/ItemJs.js"></script>
-<script src="model/ItemModel.js"></script>
 <script src="controller/validation/itemValidations.js"></script>
 
 </body>

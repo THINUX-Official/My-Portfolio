@@ -3,4 +3,5 @@ var customerObject = {
     name: "",
     address: "",
     contact: ""
+
 }

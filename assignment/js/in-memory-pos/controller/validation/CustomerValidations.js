@@ -2,72 +2,78 @@
  ///////////////////////////////////////////////////////
  **/
 
-let customerValidation = [];
+let customerValideaction = [];
 
 const cusIDRegEx = /^(C00-)[0-9]{1,3}$/;
 const cusNameRegEx = /^[A-z ]{5,20}$/;
 const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
 const cusContactRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
-$("#txtCustomerId").focus();
+$("#txtCustomerID").focus();
 
-customerValidation.push({
+
+customerValideaction.push({
     reg: cusIDRegEx,
-    field: $('#txtCustomerId'),
+    field: $('#txtCustomerID'),
     error: 'Customer ID Pattern is Wrong : C00-001'
 });
-customerValidation.push({
+customerValideaction.push({
     reg: cusNameRegEx,
     field: $('#txtCustomerName'),
     error: 'Customer Name Pattern is Wrong : Kamal'
 });
-customerValidation.push({
+customerValideaction.push({
     reg: cusAddressRegEx,
     field: $('#txtCustomerAddress'),
     error: 'Customer Address Pattern is Wrong : Galle'
 });
-customerValidation.push({
+customerValideaction.push({
     reg: cusContactRegEx,
     field: $('#txtCustomerContact'),
     error: 'Customer Contact Pattern is Wrong : 077125147'
 });
 
+
 function clearCustomerInputFields() {
-    $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").val("");
-    $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").css("border", "1px solid #ced4da");
-    $("#txtCustomerId").focus();
+    $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").val("");
+    $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").css("border", "1px solid #ced4da");
+    $("#txtCustomerID").focus();
     setBtn();
 }
 
 setBtn();
 
 //disable tab
-$("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").on("keydown keyup", function (e) {
+$("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").on("keydown keyup", function (e) {
 
-    let indexNo = customerValidation.indexOf(customerValidation.find((c) => c.field.attr("id") == e.target.id));
+    let indexNo = customerValideaction.indexOf(customerValideaction.find((c) => c.field.attr("id") == e.target.id));
+
 
     if (e.key == "Tab") {
         e.preventDefault();
     }
 
-    checkValidations(customerValidation[indexNo]);
+
+    checkValidations(customerValideaction[indexNo]);
 
     setBtn();
 
-    if (e.key == "Enter") {
 
-        if (e.target.id != customerValidation[customerValidation.length - 1].field.attr("id")) {
+    if (e.key == "Enter") {
+        $("#txtCustomerID").val(generateNewId());
+        if (e.target.id != customerValideaction[customerValideaction.length - 1].field.attr("id")) {
             //check validation is ok
-            if (checkValidations(customerValidation[indexNo])) {
-                customerValidation[indexNo + 1].field.focus();
+            if (checkValidations(customerValideaction[indexNo])) {
+                customerValideaction[indexNo + 1].field.focus();
             }
         } else {
-            if (checkValidations(customerValidation[indexNo])) {
+            if (checkValidations(customerValideaction[indexNo])) {
                 saveCustomer();
             }
         }
     }
 });
+
 
 function checkValidations(object) {
     if (object.reg.test(object.field.val())) {
@@ -96,8 +102,8 @@ function setBorder(bol, ob) {
 }
 
 function checkAll() {
-    for (let i = 0; i < customerValidation.length; i++) {
-        if (!checkValidations(customerValidation[i])) return false;
+    for (let i = 0; i < customerValideaction.length; i++) {
+        if (!checkValidations(customerValideaction[i])) return false;
     }
     return true;
 }
@@ -112,7 +118,7 @@ function setBtn() {
         $("#save").prop("disabled", true);
     }
 
-    let id = $("#txtCustomerId").val();
+    let id = $("#txtCustomerID").val();
     if (searchCustomer(id) == undefined) {
         $("#btnDelete").prop("disabled", true);
         $("#btnUpdate").prop("disabled", true);
@@ -120,19 +126,24 @@ function setBtn() {
         $("#btnDelete").prop("disabled", false);
         $("#btnUpdate").prop("disabled", false);
     }
+
 }
 
-$('#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact').on('keyup', function (event) {
+
+
+
+$('#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact').on('keyup', function (event) {
     checkCusValidity();
 });
 
-$('#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact').on('blur', function (event) {
+$('#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact').on('blur', function (event) {
     checkCusValidity();
 });
+
 
 function checkCusValidity() {
     let errorCounts = 0;
-    for (let validation of customerValidation) {
+    for (let validation of customerValideaction) {
         if (checkCus(validation.reg, validation.field)) {
             textCusSuccess(validation.field, "");
         } else {
@@ -140,6 +151,7 @@ function checkCusValidity() {
             setCusTextError(validation.field, validation.error);
         }
     }
+
 }
 
 function checkCus(regex, txtField) {

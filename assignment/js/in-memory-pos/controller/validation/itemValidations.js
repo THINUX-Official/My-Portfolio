@@ -1,33 +1,37 @@
-/*
-/!**
+/**
  ///////////////////////////////////////////////////////
- **!/
+ **/
 
-let itemValidation = [];
+let itemValideaction = [];
 
 const itmIDRegEx = /^(I00-)[0-9]{1,3}$/;
 const itemDescRegEx = /^[A-z ]{5,20}$/;
 const itemUnitRegEx = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 const itemQTYtRegEx = /^[0-9]{1,7}$/;
 
-$("#txtItemId").focus();
+$("#txtCustomerID").focus();
 
-itemValidation.push({reg: itmIDRegEx, field: $('#txtItemId'), error: 'Item ID Pattern is Wrong : I00-001'});
-itemValidation.push({
+
+
+itemValideaction.push({reg: itmIDRegEx, field: $('#txtItemId'), error: 'Item ID Pattern is Wrong : I00-001'});
+itemValideaction.push({
     reg: itemDescRegEx,
-    field: $('#txtItemName'),
+    field: $('#txtItemDescription'),
     error: 'Item Description Pattern is Wrong : Ram'
 });
-itemValidation.push({
+itemValideaction.push({
     reg: itemUnitRegEx,
-    field: $('#txtItemPrice'),
+    field: $('#txtItemUnitprice'),
     error: 'Item UnitPrice Pattern is Wrong : 2000.00'
 });
-itemValidation.push({reg: itemQTYtRegEx, field: $('#txtItemQty'), error: 'Item Qty Pattern is Wrong : 10'});
+itemValideaction.push({reg: itemQTYtRegEx, field: $('#txtItemQty'), error: 'Item Qty Pattern is Wrong : 10'});
+
+
+
 
 function clearCustomerInputFieldsItem() {
-    $("#txtItemId,#txtItemName,#txtItemPrice,#txtItemQty").val("");
-    $("#txtItemId,#txtItemName,#txtItemPrice,#txtItemQty").css("border", "1px solid #ced4da");
+    $("#txtItemId,#txtItemDescription,#txtItemUnitprice,#txtItemQty").val("");
+    $("#txtItemId,#txtItemDescription,#txtItemUnitprice,#txtItemQty").css("border", "1px solid #ced4da");
     $("#txtItemId").focus();
     setBtnItem();
 }
@@ -35,9 +39,9 @@ function clearCustomerInputFieldsItem() {
 setBtnItem();
 
 //disable tab
-$("#txtItemId,#txtItemName,#txtItemPrice,#txtItemQty").on("keydown keyup", function (e) {
+$("#txtItemId,#txtItemDescription,#txtItemUnitprice,#txtItemQty").on("keydown keyup", function (e) {
     //get the index number of data input fields indexNo
-    let indexNo = itemValidation.indexOf(itemValidation.find((c) => c.field.attr("id") == e.target.id));
+    let indexNo = itemValideaction.indexOf(itemValideaction.find((c) => c.field.attr("id") == e.target.id));
 
     //Disable tab key
     if (e.key == "Tab") {
@@ -45,25 +49,26 @@ $("#txtItemId,#txtItemName,#txtItemPrice,#txtItemQty").on("keydown keyup", funct
     }
 
     //check validations
-    checkValidationsItem(itemValidation[indexNo]);
+    checkValidationsItem(itemValideaction[indexNo]);
 
     setBtnItem();
 
     //If the enter key pressed cheque and focus
     if (e.key == "Enter") {
 
-        if (e.target.id != itemValidation[itemValidation.length - 1].field.attr("id")) {
+        if (e.target.id != itemValideaction[itemValideaction.length - 1].field.attr("id")) {
             //check validation is ok
-            if (checkValidations(itemValidation[indexNo])) {
-                itemValidation[indexNo + 1].field.focus();
+            if (checkValidations(itemValideaction[indexNo])) {
+                itemValideaction[indexNo + 1].field.focus();
             }
         } else {
-            if (checkValidations(itemValidation[indexNo])) {
+            if (checkValidations(itemValideaction[indexNo])) {
                 itemSave();
             }
         }
     }
 });
+
 
 function checkValidationsItem(object) {
     if (object.reg.test(object.field.val())) {
@@ -88,11 +93,12 @@ function setBorderItems(bol, ob) {
             ob.field.css("border", "1px solid #ced4da");
         }
     }
+
 }
 
 function checkAllItem() {
-    for (let i = 0; i < itemValidation.length; i++) {
-        if (!checkValidationsItem(itemValidation[i])) return false;
+    for (let i = 0; i < itemValideaction.length; i++) {
+        if (!checkValidationsItem(itemValideaction[i])) return false;
     }
     return true;
 }
@@ -115,20 +121,24 @@ function setBtnItem() {
         $("#btnItemDelete").prop("disabled", false);
         $("#btnItemUpdate").prop("disabled", false);
     }
+
 }
 
 
-$('#txtItemId,#txtItemName,#txtItemPrice,#txtItemQty').on('keyup', function (event) {
+
+
+$('#txtItemId,#txtItemDescription,#txtItemUnitprice,#txtItemQty').on('keyup', function (event) {
     checkCusValidityItem();
 });
 
-$('#txtItemId,#txtItemName,#txtItemPrice,#txtItemQty').on('blur', function (event) {
+$('#txtItemId,#txtItemDescription,#txtItemUnitprice,#txtItemQty').on('blur', function (event) {
     checkCusValidityItem();
 });
+
 
 function checkCusValidityItem() {
     let errorCount = 0;
-    for (let validation of itemValidation) {
+    for (let validation of itemValideaction) {
         if (checkItem(validation.reg, validation.field)) {
             textItemSuccess(validation.field, "");
         } else {
@@ -136,7 +146,7 @@ function checkCusValidityItem() {
             setItemTextError(validation.field, validation.error);
         }
     }
-    setItemButtonState(errorCount);
+    /*setItemButtonState(errorCount);*/
 }
 
 function checkItem(regex, txtField) {
@@ -166,4 +176,28 @@ function defaultCusText(txtField, error) {
     txtField.css("border", "1px solid #ced4da");
     txtField.parent().children('span').text(error);
 }
-*/
+
+/*
+function setItemButtonState(value) {
+    if (value > 0) {
+        $("#btnItemSave").attr('disabled', true);
+    } else {
+        $("#btnItemSave").attr('disabled', false);
+    }
+}
+
+$("#btnClearItem").click(function () {
+    clearAllItemData();
+});
+
+function clearAllItemData() {
+    $('#txtItemId').val("");
+    $('#txtItemDescription').val("");
+    $('#txtItemUnitprice').val("");
+    $('#txtItemQty').val("");
+
+    $('#itemId').val("");
+    $('#descriptions').val("");
+    $('#unitprice').val("");
+    $('#qty').val("");
+}*/
