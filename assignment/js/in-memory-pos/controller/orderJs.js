@@ -159,6 +159,8 @@ $('#purchaseOrder').click(function (){
     tempOrderCartAr.pop();
     addCartData();
 
+    $("#total").val("00000.00");
+
     // console.log(orderArray);
 });
 
